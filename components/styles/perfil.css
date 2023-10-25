@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.perfil-cont{
+    width: 80%;
+    min-height: 100vh;
+    margin: auto;
+    padding: 2%;
+    background-color: #fff9db;
+}
+
+.perfil-datos-cont{
+    width: 100%;
+    margin-bottom: 5%;
+    display: flex;
+    /*justify-content: space-between;*/
+}
+
+.foto-perfil-cont{
+    width: 20%;
+    border-radius: 15px;
+    background-color: #2f9e44;
+    padding: 2%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto-perfil-cont img{
+    width: 100%;
+}
+
+.btn-modificar{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #425f57;
+    background-color: #cfff8d;
+    background-image: url('../img/img-perfil/lapiz.png');
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    position: absolute;
+
+    /* display: none; */
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.btn-modificar:hover{
+    transform: scale(1.1);
+}
+
+.modif-img-perfil{
+    bottom: 5%;
+    right: 5%;
+}
+
+.foto-perfil-cont:hover .modif-img-perfil{
+    /* display: block; */
+    opacity: 1;
+}
+
+.usuario-info-cont{
+    width: 100%;
+}
+
+.usuario-info-cont h3{
+    font-weight: normal;
+}
+
+.usuario-info-cont .contenido-cont{
+    width: 40%;
+    height: 36%;
+    padding-left: 2%;
+    margin-bottom: 2%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.usuario-info-cont .contenido-cont .nombre-usuario,.puntos-usuario{
+    width: 80%;
+    background-color: #cfff8d;
+    border-radius: 1vw;
+    border: 1px solid #425f57;
+    color: #425f57;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nombre-cont{
+    position: relative;
+}
+
+.modif-nombre{
+    right: 5%;
+    bottom: 0%;
+}
+
+.nombre-cont:hover .modif-nombre{
+    /* display: block; */
+    opacity: 1;
+}
+
+.mapa-cont{
+    width: 100%;
+    height: 50vw;
+    margin-bottom: 5%;
+    border-radius: 15px;
+    background-color: #2f9e44;
+    user-select: none;
+    z-index: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.mapa{
+    width: 90%;
+    height: 90%;
+    border: none;
+    border-radius: 15px;
+}
+
+.icono-ampliar{
+    width: 10%;
+    position: absolute;
+    right: 2.5%;
+    bottom: 2.5%;
+}
+
+.icono-ampliar img{
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.ampliartxt{
+    width: 100%;
+    border: 1px solid #425f57;
+    border-radius: 5px;
+    background-color: #cfff8d;
+    position: absolute;
+    color: #425f57;
+    z-index: 1;
+    padding: 5%;
+    bottom: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.icono-ampliar:hover .ampliartxt {
+    transform: translateX(-90%);
+    opacity: 1;
+}
+
+@media screen and (max-width: 425px ) {
+    .perfil-cont{
+        width: 100%;
+    }
+
+    .perfil-datos-cont{
+        /* padding: 5%; */
+    }
+
+    .foto-perfil-cont{
+        width: 50%;
+    }
+
+    .btn-modificar{
+        width: 25px;
+        height: 25px;
+        border-radius: 5px;
+    }
+
+    .usuario-info-cont .contenido-cont{
+        width: 100%;
+        padding-left: 10%;
+        margin-bottom: 5%;
+    }
+
+    .mapa-cont{
+        height: 90vw;
+    }
+
+    .icono-ampliar{
+        width: 15%;
+        position: absolute;
+        right: 2%;
+        bottom: 2%;
+    }
+}
