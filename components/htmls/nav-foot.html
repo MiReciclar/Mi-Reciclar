@@ -4,12 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha384-ez+ZRjxuwzUe3p7lFw6JW79pZlXuWBc9fXZZqeE00vb5kXGj49+5C5gT0of4CKMS"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="../styles/nav-foot.css">
+
     <title>Nav-Footer</title>
   </head>
   <body class="">
@@ -18,50 +14,28 @@
         <div class="relative flex h-20 items-center justify-between">
           <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
             
-            <!-- Mobile menu button-->
+        <!-- Hamburguesa mobile -->
             <button
-              type="button"
-              class="relative inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-green-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              type="button" id="hamburger"
+              class="relative flex-column items-center justify-center rounded-md p-2 text-white hover:bg-green-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
-              <svg
-                class="block h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                />
-              </svg>
-           
-              <svg
-                class="hidden h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
+            <div id="bar1" class="bar"></div>
+            <div id="bar2" class="bar"></div>
+            <div id="bar3" class="bar"></div>
             </button>
           </div>
+          
+          
           <div
             class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
           >
+
+          <!-- Links navbar  -->
             <div class="flex flex-shrink-0 items-center">
               <img
-                class="h-11 w-auto"
+                class="h-12 w-auto rounded-full bg-white"
                 src="/components/img/logo-reciclar-removebg-preview.png"
                 alt="Mi Reciclar"
               />
@@ -98,9 +72,9 @@
           </div>
 
           <div
-            class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+            class="absolute inset-y-0 right-0 flex items-center sm:static sm:inset-auto sm:ml-6 sm:pr-0"
           >
-            <!-- Profile dropdown -->
+           <!-- Usuario -->
             <div class="relative ml-3">
               <div>
                 <button
@@ -110,8 +84,6 @@
                   aria-expanded="false"
                   aria-haspopup="true"
                 >
-                  <span class="absolute -inset-1.5"></span>
-                  <span class="sr-only">Open user menu</span>
                   <img
                     class="h-11 w-11 rounded-full"
                     src="/components/img/image-removebg-preview (1).png"
@@ -122,7 +94,7 @@
 
              <!-- MODAL USUARIO -->
               <div id="user-menu"
-                class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none transition opacity transform duration-300 ease-out"
+                class="opacity-0 absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none transition opacity transform duration-300 ease-out"
                 role="menu"
                 aria-orientation="vertical"
                 aria-labelledby="user-menu-button"
@@ -158,10 +130,9 @@
         </div>
       </div>
 
-      <!-- Mobile menu, show/hide based on menu state. -->
-      <div class="sm:hidden" id="mobile-menu">
+      <!-- Menu mobile -->
+      <div class="md:hidden hidden" id="mobile-menu">
         <div class="space-y-1 px-2 pb-3 pt-2">
-          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
           <a
             href="#"
             class="text-white hover:bg-green-800 block rounded-md px-3 py-2 text-base font-medium"
@@ -205,38 +176,29 @@
               class="flex justify-center space-x-3 md:justify-start"
             >
               <div
-                class="flex items-center justify-center w-12 h-12 rounded-full dark:bg-violet-400"
+                class="flex items-center justify-center w-12 h-12 rounded-full bg-white"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 32 32"
-                  fill="currentColor"
-                  class="flex-shrink-0 w-5 h-5 rounded-full dark:text-gray-900"
-                >
-                  <path
-                    d="M18.266 26.068l7.839-7.854 4.469 4.479c1.859 1.859 1.859 4.875 0 6.734l-1.104 1.104c-1.859 1.865-4.875 1.865-6.734 0zM30.563 2.531l-1.109-1.104c-1.859-1.859-4.875-1.859-6.734 0l-6.719 6.734-6.734-6.734c-1.859-1.859-4.875-1.859-6.734 0l-1.104 1.104c-1.859 1.859-1.859 4.875 0 6.734l6.734 6.734-6.734 6.734c-1.859 1.859-1.859 4.875 0 6.734l1.104 1.104c1.859 1.859 4.875 1.859 6.734 0l21.307-21.307c1.859-1.859 1.859-4.875 0-6.734z"
-                  ></path>
-                </svg>
+                <img src="../img/logo-reciclar-removebg-preview.png" alt="">
               </div>
-              <span class="self-center text-2xl font-semibold">Brand name</span>
+              <span class="self-center text-3xl font-semibold">Mi Reciclar</span>
             </a>
           </div>
           <div class="col-span-6 text-center md:text-left md:col-span-3">
             <ul>
-                <p class="pb-1 text-lg font-medium">Nuestra Web</p>
+                <p class="pb-1 text-xl font-medium">Nuestra Web</p>
               <li>
                 <a
                   rel="noopener noreferrer"
                   href="#"
-                  class="hover:dark:text-violet-400"
-                  >Nuestra Misión</a
+                  class="hover:text-green-500"
+                  >Misión</a
                 >
               </li>
               <li>
                 <a
                   rel="noopener noreferrer"
                   href="#"
-                  class="hover:dark:text-violet-400"
+                  class="hover:text-green-500"
                   >¿Cómo Reciclar?</a
                 >
               </li>
@@ -244,7 +206,7 @@
                 <a
                   rel="noopener noreferrer"
                   href="#"
-                  class="hover:dark:text-violet-400"
+                  class="hover:text-green-500"
                   >Recompensas</a
                 >
               </li>
@@ -252,7 +214,7 @@
                 <a
                   rel="noopener noreferrer"
                   href="#"
-                  class="hover:dark:text-violet-400"
+                  class="hover:text-green-500"
                   >Jornadas</a
                 >
               </li>
@@ -260,53 +222,53 @@
                 <a
                   rel="noopener noreferrer"
                   href="#"
-                  class="hover:dark:text-violet-400"
+                  class="hover:text-green-500"
                   >Eco Noticias</a
                 >
               </li>
             </ul>
           </div>
           <div class="col-span-6 text-center md:text-left md:col-span-3">
-            <p class="pb-1 text-lg font-medium">Category</p>
+            <p class="pb-1 text-xl font-medium">El Equipo</p>
             <ul>
               <li>
                 <a
                   rel="noopener noreferrer"
                   href="#"
-                  class="hover:dark:text-violet-400"
-                  >Link</a
+                  class="hover:text-green-500"
+                  >Mailen Alvarez</a
                 >
               </li>
               <li>
                 <a
                   rel="noopener noreferrer"
                   href="#"
-                  class="hover:dark:text-violet-400"
-                  >Link</a
+                  class="hover:text-green-500"
+                  >Giuliana Ambrosino</a
                 >
               </li>
               <li>
                 <a
                   rel="noopener noreferrer"
                   href="#"
-                  class="hover:dark:text-violet-400"
-                  >Link</a
+                  class="hover:text-green-500"
+                  >Camila Ortubey</a
                 >
               </li>
               <li>
                 <a
                   rel="noopener noreferrer"
                   href="#"
-                  class="hover:dark:text-violet-400"
-                  >Link</a
+                  class="hover:text-green-500"
+                  >Santiago Flores</a
                 >
               </li>
               <li>
                 <a
                   rel="noopener noreferrer"
                   href="#"
-                  class="hover:dark:text-violet-400"
-                  >Link</a
+                  class="hover:text-green-500"
+                  >Emanuel Gaona</a
                 >
               </li>
             </ul>
@@ -316,20 +278,14 @@
           <div
             class="flex flex-col self-center text-sm text-center md:block lg:col-start-1 md:space-x-6"
           >
-            <span>©2023 All rights reserved</span>
-            <a rel="noopener noreferrer" href="#">
-              <span>Privacy policy</span>
-            </a>
-            <a rel="noopener noreferrer" href="#">
-              <span>Terms of service</span>
-            </a>
+            <span>©2023 Mi Reciclar - Todos los derechos reservados</span>
           </div>
           <div class="flex justify-center pt-4 space-x-4 lg:pt-0 lg:col-end-13">
             <a
               rel="noopener noreferrer"
               href="#"
               title="Email"
-              class="flex items-center justify-center w-10 h-10 rounded-full dark:bg-violet-400 dark:text-gray-900"
+              class="flex items-center justify-center w-10 h-10 rounded-full bg-green-600"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -349,7 +305,7 @@
               rel="noopener noreferrer"
               href="#"
               title="Twitter"
-              class="flex items-center justify-center w-10 h-10 rounded-full dark:bg-violet-400 dark:text-gray-900"
+              class="flex items-center justify-center w-10 h-10 rounded-full bg-green-600"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -366,7 +322,7 @@
               rel="noopener noreferrer"
               href="#"
               title="GitHub"
-              class="flex items-center justify-center w-10 h-10 rounded-full dark:bg-violet-400 dark:text-gray-900"
+              class="flex items-center justify-center w-10 h-10 rounded-full bg-green-600"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

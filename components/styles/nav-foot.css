@@ -1,0 +1,12 @@
+.custom-modal {
+    background-color: rgba(37, 54, 37, 0.526);
+    display: block;
+}
+
+.bar {
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    margin: 2px 0;
+    transition: 0.4s
+}
