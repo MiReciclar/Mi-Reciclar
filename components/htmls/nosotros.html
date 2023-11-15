@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@7.0.3/swiper-bundle.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <title>Nosotros</title>
@@ -238,23 +239,61 @@
         <div class="w-[500px] h-[680px] p-10  reveal-on-scroll">
           <img src="../img/equipo-nosotros.jpg" alt="" />
         </div>  
-
         <div class="justify-center items-center flex w-1/2">
           <div class="flex-column items-center mx-auto reveal-on-scroll-text">
             <h2 class="text-5xl tracking-wide font-bold pb-2 text-green-900">
-              Nuestra Misión
+              Nuestro Equipo
             </h2>
-            <div class="h-1 w-[51vh] bg-green-600"></div>
+            <div class="h-1 w-[52vh] bg-green-600"></div>
             
             <p class="mt-5 max-w-lg tracking-wide sm:text-xl/relaxed text-green-900">
-              MiReciclAR busca fomentar la conciencia ambiental y promover prácticas de reciclaje eficientes en la comunidad, convirtiendo el reciclaje en una actividad fácil, divertida y gratificante.
-              Creemos que cada acción cuenta y que cada material reciclable merece una segunda oportunidad.
-              <br><br> <strong class="text-green-600 text-2xl">¡Unite a nosotros y generemos el cambio!</strong> 
+              Mi ReciclAR está compuesto por un grupo de jóvenes programadores entusiastas que buscan combinar sus conocimientos en tecnología con un propósito social y humanitario. <br>Creemos fervientemente que el pequeño aporte de cada uno de nosotros puede impactar enormemente en nuestro planeta.
+              <br><br> <strong class="text-green-600 text-2xl">¡Acompañanos hacia un mundo más limpio y sostenible!</strong> 
             </p>
           </div>
         </div>
       </div>
     </section>
+   
+
+    <section id="section-third" class="mb-8">
+        <div class="mx-auto overflow-hidden" style="width: calc(100% - 200px);">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                <img src="../img/pescarbanner.jpg" alt="Slide 1" class="w-full max-h-[300px] object-cover">
+              </div>
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
+                <img src="../img/banerrpescar.jpeg" alt="Slide 2" class="w-full max-h-[300px] object-cover">
+              </div>
+              <!-- Slide 3 -->
+              <div class="swiper-slide">
+                <img src="../img/centralparrk.jpg" alt="Slide 3" class="w-full max-h-[300px] object-cover">
+              </div>
+              <!-- Slide 4 -->
+              <div class="swiper-slide">
+                <img src="../img/chicos-artech.jpg" alt="Slide 4" class="w-full max-h-[300px] object-cover">
+              </div>
+              <div class="swiper-slide">
+                <img src="../img/botellas-zoom.jpg" alt="Slide 5" class="w-full max-h-[300px] object-cover">
+              </div>
+              <div class="swiper-slide">
+                <img src="../img/botellas-zoom.jpg" alt="Slide 6" class="w-full max-h-[300px] object-cover">
+              </div>
+            </div>
+            <!-- Agrega la paginación -->
+            <div class="swiper-pagination"></div>
+            <!-- Agrega los botones de navegación -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </section>
+
+
+
     </main>
 
     <footer class="py-6 bg-green-800 dark:text-gray-50">
@@ -433,6 +472,8 @@
         </div>
       </footer>
 
+      <script src="https://cdn.jsdelivr.net/npm/swiper@7.0.3/swiper-bundle.min.js"></script>
       <script src="../js/nosotros.js"></script>
+    
   </body>
 </html>
