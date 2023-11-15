@@ -7,6 +7,158 @@
     <title>Nosotros</title>
   </head>
   <body>
+     <nav class="bg-green-600">
+      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-20 items-center justify-between">
+          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            
+        <!-- Hamburguesa mobile -->
+            <button
+              type="button" id="hamburger"
+              class="relative flex-column items-center justify-center rounded-md p-2 text-white hover:bg-green-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+            <div id="bar1" class="bar"></div>
+            <div id="bar2" class="bar"></div>
+            <div id="bar3" class="bar"></div>
+            </button>
+          </div>
+          
+          
+          <div
+            class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
+          >
+
+          <!-- Links navbar  -->
+            <div class="flex flex-shrink-0 items-center">
+              <img
+                class="h-12 w-auto rounded-full bg-white"
+                src="/components/img/logo-reciclar-removebg-preview.png"
+                alt="Mi Reciclar"
+              />
+            </div>
+            <div class="hidden sm:ml-6 sm:block">
+              <div class="flex space-x-3">
+                <a
+                  href="#"
+                  class="text-white hover:bg-green-800 rounded-md px-3 py-2 lg:text-lg font-medium text-sm"
+                  >Nuestra Misión</a
+                >
+                <a
+                  href="#"
+                  class="text-white hover:bg-green-800 rounded-md px-3 py-2 lg:text-lg font-medium text-sm"
+                  >Recompensas</a
+                >
+                <a
+                  href="#"
+                  class="text-white hover:bg-green-800 rounded-md px-3 py-2 lg:text-lg font-medium text-sm"
+                  >Jornadas</a
+                >
+                <a
+                  href="#"
+                  class="text-white hover:bg-green-800 rounded-md px-3 py-2 lg:text-lg font-medium text-sm"
+                  >Eco Noticias</a
+                >
+                <a
+                  href="#"
+                  class="text-white hover:bg-green-800 rounded-md px-3 py-2 lg:text-lg font-medium text-sm"
+                  >Contacto</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="absolute inset-y-0 right-0 flex items-center sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+          >
+           <!-- Usuario -->
+            <div class="relative ml-3">
+              <div>
+                <button
+                  type="button"
+                  class="relative flex rounded-full focus:ring-2 focus:ring-green-800"
+                  id="user-menu-button"
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                >
+                  <img
+                    class="h-11 w-11 rounded-full"
+                    src="/components/img/image-removebg-preview (1).png"
+                    alt="emoji-usuario"
+                  />
+                </button>
+              </div>
+
+             <!-- MODAL USUARIO -->
+              <div id="user-menu"
+                class="opacity-0 absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none transition opacity transform duration-300 ease-out"
+                role="menu"
+                aria-orientation="vertical"
+                aria-labelledby="user-menu-button"
+                tabindex="-1"
+              >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-lg text-green-800"
+                  role="menuitem"
+                  tabindex="-1"
+                  id="user-menu-item-0"
+                  >Mi Perfil</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-lg text-green-800"
+                  role="menuitem"
+                  tabindex="-1"
+                  id="user-menu-item-1"
+                  >Iniciar Sesión</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-lg text-green-800"
+                  role="menuitem"
+                  tabindex="-1"
+                  id="user-menu-item-2"
+                  >Algo mas????</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menu mobile -->
+      <div class="md:hidden hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pb-3 pt-2">
+          <a
+            href="#"
+            class="text-white hover:bg-green-800 block rounded-md px-3 py-2 text-base font-medium"
+            >Nuestra Misión</a
+          >
+          <a
+            href="#"
+            class="text-white hover:bg-green-800 block rounded-md px-3 py-2 text-base font-medium"
+            >Recompensas</a
+          >
+          <a
+            href="#"
+            class="text-white hover:bg-green-800 block rounded-md px-3 py-2 text-base font-medium"
+            >Jornadas</a
+          >
+          <a
+            href="#"
+            class="text-white hover:bg-green-800 block rounded-md px-3 py-2 text-base font-medium"
+            >Eco Noticias</a
+          >
+          <a
+            href="#"
+            class="text-white hover:bg-green-800 block rounded-md px-3 py-2 text-base font-medium"
+            >Contacto</a
+          >
+        </div>
+      </div>
+    </nav>
     <main>
       <section
         class="relative bg-[url(../img/botellas-zoom.jpg)] bg-cover bg-center bg-no-repeat"
@@ -16,7 +168,7 @@
         ></div>
 
         <div
-          class="relative mx-20 max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
+          class="relative mx-20 max-w-screen-xl px-4 py-20 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
         >
           <div
             class="max-w-xl flex-column space-y-10 ltr:sm:text-left rtl:sm:text-right"
@@ -29,11 +181,11 @@
               </strong>
             </h1>
 
-            <p class="mt-2 max-w-lg text-green-900 sm:text-2xl/relaxed">
+            <p class="mt-2 max-w-lg text-green-900 sm:text-xl/relaxed">
               Somos tu guía hacia un estilo de vida más sustentable. Cada gesto
-              cuenta, cada acción suma. Explorá cómo el reciclaje puede
+              cuenta, cada acción suma. <br>Explorá cómo el reciclaje puede
               transformar nuestro mundo y descubrí recompensas por cada paso
-              ecológico que das. Unite a la comunidad de cambio y creá un
+              ecológico que das. <br>Unite a la comunidad de cambio para generar un
               impacto duradero. <br />
               <strong>¡Empecemos a reciclar hoy!</strong>
             </p>
@@ -55,22 +207,22 @@
         id="section-create"
         class="h-screen flex justify-center items-center"
       >
-        <div class="container justify-center items-center flex">
-          <div class="w-1/2 p-10">
-            <img src="./img/pexels-pixabay-159823.jpg" alt="" />
-          </div>
+      <div class="relative ml-8 w-[50%] h-[500px]">
+        <img src="../img/mano-planta.jpg" alt="Imagen 1" class="absolute top-0 left-0 w-2/3 h-2/3 object-cover">
+        <img src="../img/bolsa-celu.jpg" alt="Imagen 2" class="absolute bottom-0 right-0 w-2/3 h-2/3 object-cover">
+      </div>
 
           <div class="justify-center items-center flex w-1/2">
             <div class="flex-column items-center mx-auto">
-              <h2 class="text-5xl tracking-wide font-bold pb-1 text-green-900">
+              <h2 class="text-5xl tracking-wide font-bold pb-2 text-green-900">
                 Nuestra Misión
               </h2>
               <div class="h-1 w-[51vh] bg-green-600"></div>
-              <div class="h-1 bg-grey-700"></div>
-              <p class="mt-4 max-w-lg tracking-wide sm:text-xl/relaxed text-green-900">
+              
+              <p class="mt-5 max-w-lg tracking-wide sm:text-xl/relaxed text-green-900">
                 MiReciclAR busca fomentar la conciencia ambiental y promover prácticas de reciclaje eficientes en la comunidad, convirtiendo el reciclaje en una actividad fácil, divertida y gratificante.
                 Creemos que cada acción cuenta y que cada material reciclable merece una segunda oportunidad.
-                <br><br>¡Unite a nosotros y generemos el cambio!
+                <br><br> <strong class="text-green-600 text-2xl">¡Unite a nosotros y generemos el cambio!</strong> 
               </p>
             </div>
           </div>
