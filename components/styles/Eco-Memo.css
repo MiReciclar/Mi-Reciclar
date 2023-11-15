@@ -4,18 +4,40 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-color: #fff9db;
+    color: #4caf50;
 }
-
-h1,
-h2 {
-    font-size: 36px;
-    font-weight: bold;
-    color: #4CAF50;
+h1{
     text-align: center;
-    margin-bottom: 20px;
-}
 
-.tablero {
+}
+p{
+    margin: .5rem;
+}
+.points_section{
+    background-color: #4caf50;
+    color: #fff;
+    margin: 0 .5rem;
+    border-radius: .3rem;
+    padding: .1rem .4rem;
     display: flex;
-    background-color: brown;
+    justify-content: space-between;
+    align-items: center;
+}
+.points{
+    background-color: #000;
+    border-radius: 30px;
+    background-color: #fff9db;
+    padding: 0 2rem;
+    color: #4caf50;
+    font-weight: 700;
+    
+}
+.board {
+    margin: .4rem 0;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(40px, 1fr));
+    gap: 10px 20px;
+}
+.board .card img{
+    aspect-ratio: 1/1;
 }
