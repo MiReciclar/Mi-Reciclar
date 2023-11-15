@@ -1,11 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Nosotros</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <main>
+      <section
+        class="relative bg-[url(../img/botellas-zoom.jpg)] bg-cover bg-center bg-no-repeat"
+      >
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-white/95 to-white/25"
+        ></div>
+
+        <div
+          class="relative mx-20 max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
+        >
+          <div
+            class="max-w-xl flex-column space-y-10 ltr:sm:text-left rtl:sm:text-right"
+          >
+            <h1 class="font-extrabold text-green-700 text-5xl">
+              Mi ReciclAR
+
+              <strong class="block text-3xl font-extrabold text-green-900">
+                Empezá a ayudar
+              </strong>
+            </h1>
+
+            <p class="mt-2 max-w-lg text-green-900 sm:text-2xl/relaxed">
+              Somos tu guía hacia un estilo de vida más sustentable. Cada gesto
+              cuenta, cada acción suma. Explorá cómo el reciclaje puede
+              transformar nuestro mundo y descubrí recompensas por cada paso
+              ecológico que das. Unite a la comunidad de cambio y creá un
+              impacto duradero. <br />
+              <strong>¡Empecemos a reciclar hoy!</strong>
+            </p>
+
+            <div class="flex mt-6 flex-wrap gap-4 text-center frame">
+              <a href="#section-create">
+                <button
+                  class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full"
+                >
+                  Vamos!
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="section-create"
+        class="h-screen flex justify-center items-center"
+      >
+        <div class="container justify-center items-center flex">
+          <div class="w-1/2 p-10">
+            <img src="./img/pexels-pixabay-159823.jpg" alt="" />
+          </div>
+
+          <div class="justify-center items-center flex w-1/2">
+            <div class="flex-column items-center mx-auto">
+              <h2 class="text-5xl tracking-wide font-bold pb-1 text-green-900">
+                Nuestra Misión
+              </h2>
+              <div class="h-1 w-[51vh] bg-green-600"></div>
+              <div class="h-1 bg-grey-700"></div>
+              <p class="mt-4 max-w-lg tracking-wide sm:text-xl/relaxed text-green-900">
+                MiReciclAR busca fomentar la conciencia ambiental y promover prácticas de reciclaje eficientes en la comunidad, convirtiendo el reciclaje en una actividad fácil, divertida y gratificante.
+                Creemos que cada acción cuenta y que cada material reciclable merece una segunda oportunidad.
+                <br><br>¡Unite a nosotros y generemos el cambio!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
