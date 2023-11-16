@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-Memo</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../styles/nav-foot.css" />
-    <link rel="stylesheet" href="../styles/perfil.css">
-
-    <title>Perfil</title>
+    <link rel="stylesheet" href="../styles/Eco-Memo.css">
+    <script defer src="../js/Eco-Memo.js"></script>
 </head>
 <body>
     <nav class="bg-green-600">
@@ -161,33 +161,91 @@
           </div>
         </div>
       </nav>
-    <div class="perfil-cont">
-        <div class="perfil-datos-cont">
-            <div class="foto-perfil-cont">
-                <img class="foto-perfil" src="../img/img-perfil/sin foto 2.png" alt="foto de perfil del usuario">
-                <div class="btn-modificar modif-img-perfil"></div>
+
+      <!-- Sección de juego de tarjetas -->
+    <h1 class=" m-3 text-5xl">Eco-Memo</h1>
+    <div class="points_section p-3 m-4">
+        <p>Puntos: </p><span class ="points"id="points">1000</span>
+    </div>
+    <div class="board">
+        <div class="card">
+            <div class="back active">
+                <img src="../img//logo-reciclar-removebg-preview.png" alt="">
             </div>
-
-            <div class="usuario-info-cont">
-                <div class="nombre-cont contenido-cont">
-                    <h3>Usuario</h3>
-                    <div class="nombre-usuario">Andres C.</div>
-                    <div class="btn-modificar modif-nombre"></div>
-                    <!-- ver como implemetar el btn para modificar el nombre -->
-                </div>
-
-                <div class="puntos-cont contenido-cont">
-                    <h3>Puntos</h3>
-                    <div class="puntos-usuario">1000</div>
-                </div>
+            <div class="front desactive">
+                <img src="../img/Eco-Memo/Carton.jpg">
             </div>
         </div>
-
-        <div class="mapa-cont">
-            <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d210146.75955271677!2d-58.5981081473618!3d-34.61571293339003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20CABA!5e0!3m2!1ses-419!2sar!4v1698012999677!5m2!1ses-419!2sar"></iframe>
-            <div class="icono-ampliar">
-                <img src="../img/img-perfil/papelera-de-reciclaje.png" alt="icono tachos de reciclaje">
-                <div class="ampliartxt">Ampliar</div>
+        <div class="card">
+            <div class="back active">
+                <img src="../img//logo-reciclar-removebg-preview.png" alt="">
+            </div>
+            <div class="front desactive">
+                <img src="../img/Eco-Memo/Metal.jpg">
+            </div>
+        </div>
+        <div class="card">
+            <div class="back active">
+                <img src="../img//logo-reciclar-removebg-preview.png" alt="">
+            </div>
+            <div class="front desactive">
+                <img src="../img/Eco-Memo/Plastico.jpg">
+            </div>
+        </div>
+        <div class="card">
+            <div class="back active">
+                <img src="../img/logo-reciclar-removebg-preview.png" alt="">
+            </div>
+            <div class="front desactive">
+                <img src="../img/Eco-Memo/Metal.jpg">
+            </div>
+        </div>
+        <div class="card">
+            <div class="back active">
+                <img src="../img/logo-reciclar-removebg-preview.png" alt="">
+            </div>
+            <div class="front desactive">
+                <img src="../img/Eco-Memo/Carton.jpg">
+            </div>
+        </div>
+        <div class="card">
+            <div class="back active">
+                <img src="../img/logo-reciclar-removebg-preview.png" alt="">
+            </div>
+            <div class="front desactive">
+                <img src="../img/Eco-Memo/Vidrio.jpg">
+            </div>
+        </div>
+        <div class="card">
+            <div class="back active">
+                <img src="../img/logo-reciclar-removebg-preview.png" alt="">
+            </div>
+            <div class="front desactive">
+                <img src="../img/Eco-Memo/Organico.jpg">
+            </div>
+        </div>
+        <div class="card">
+            <div class="back active">
+                <img src="../img/logo-reciclar-removebg-preview.png" alt="">
+            </div>
+            <div class="front desactive">
+                <img src="../img/Eco-Memo/Vidrio.jpg">
+            </div>
+        </div>
+        <div class="card">
+            <div class="back active">
+                <img src="../img/logo-reciclar-removebg-preview.png" alt="">
+            </div>
+            <div class="front desactive">
+                <img src="../img/Eco-Memo/Organico.jpg">
+            </div>
+        </div>
+        <div class="card">
+            <div class="back active">
+                <img src="../img/logo-reciclar-removebg-preview.png" alt="">
+            </div>
+            <div class="front desactive">
+                <img src="../img/Eco-Memo/Plastico.jpg">
             </div>
         </div>
     </div>
@@ -368,6 +426,6 @@
           </div>
         </div>
       </footer>
-    <script src="../js/nav-foot.js"></script>
+      <script src="../js/nav-foot.js"></script>
 </body>
 </html>
