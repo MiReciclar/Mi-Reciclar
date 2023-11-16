@@ -1,0 +1,12 @@
+.swiper-container {
+    position: relative;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: rgb(3, 94, 3);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10; /* Ajusta este valor según sea necesario */
+}
