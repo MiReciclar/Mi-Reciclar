@@ -18,7 +18,6 @@
 
 .cont-form{
     width: 40%;
-    /* border: 1px solid #ddd; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,7 +26,6 @@
 .cont-detalle{
     width: 60%;
     height: 100%;
-    /* border: 1px solid #ddd; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -112,7 +110,7 @@
     opacity: 0;
     position: absolute;
     z-index: -9999;
-    transition: opacity 1s ease; /* Agrega esta línea */
+    transition: opacity 1s ease;
 }
 
 .esfera-superior-izquierda{
@@ -122,7 +120,7 @@
     /* transform: translate(-50%, -50%); */
     /* transition: top 1s ease, left 1s ease, opacity 1s ease;  */
     z-index: -9999;
-    animation: esfera-izquierda 1s ease forwards; /* Agrega esta línea */
+    animation: esfera-izquierda 1s ease forwards;
 }
 
 .esfera-inferior-derecha{
@@ -132,7 +130,7 @@
     /* transform: translate(50%, 50%); */
     /* transition: bottom 1s ease, right 1s ease, opacity 1s ease; */
     z-index: -9999;
-    animation: esfera-deracha 1s ease forwards; /* Agrega esta línea */
+    animation: esfera-deracha 1s ease forwards;
 }
 
 .difuminado{
@@ -187,4 +185,22 @@
         opacity: 1;
         transition: opacity 1s ease;
     }
+}
+
+
+@media screen and (max-width: 425px){
+
+    .cont-detalle{
+        display: none;
+    }
+
+    .cont-form{
+        width: 90%;
+    }
+
+    .decoracion{
+        width: 1500px;
+        height: 1500px;
+    }
+
 }
