@@ -6,14 +6,17 @@ body {
     background-color: #fff9db;
     color: #4caf50;
 }
-h1{
+
+h1 {
     text-align: center;
 
 }
-p{
+
+p {
     margin: .5rem;
 }
-.points_section{
+
+.points_section {
     background-color: #4caf50;
     color: #fff;
     margin: 0 .5rem;
@@ -23,21 +26,69 @@ p{
     justify-content: space-between;
     align-items: center;
 }
-.points{
+
+.points {
     background-color: #000;
     border-radius: 30px;
     background-color: #fff9db;
     padding: 0 2rem;
     color: #4caf50;
     font-weight: 700;
-    
+
 }
+
 .board {
-    margin: .4rem 0;
+    margin: .4rem auto;
+    padding: 10px;
     display: grid;
-    grid-template-columns: repeat(5, minmax(40px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(95px, 200px));
     gap: 10px 20px;
+    place-content: center;
+    background-color: #4caf50;
+    width: 90%;
+    border-radius: .3rem;
 }
-.board .card img{
-    aspect-ratio: 1/1;
+
+.board .card {
+    object-fit: contain;
+    background-color: #fff9db;
+    border-radius: .3rem;
+    width: 100%;
+    height: 100%;
 }
+
+.board .card img {
+    max-width: 100%;
+    min-height: 100%;
+    border-radius: .3rem;
+    width: 100%;
+    height: 100%;
+}
+
+.board .carton, div.metal, div.organic, div.plastic, div.glass {
+    background-image: url("../img/logo-reciclar-removebg-preview.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.board .carton:hover {
+    background-image: url("../img/Eco-Memo/Carton.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: 1s;
+}
+
+.board .glass:hover {
+    background-image: url("../img/Eco-Memo/Vidrio.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: 1s;
+}
+
+.board .metal {}
+
+.board .plastic {}
+
+.board .organic {}
