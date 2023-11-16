@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .perfil-cont{
@@ -22,7 +23,7 @@
 .foto-perfil-cont{
     width: 20%;
     border-radius: 15px;
-    background-color: #2f9e44;
+    background-color: #4CAF50;
     padding: 2%;
     position: relative;
     display: flex;
@@ -86,10 +87,10 @@
 
 .usuario-info-cont .contenido-cont .nombre-usuario,.puntos-usuario{
     width: 80%;
-    background-color: #cfff8d;
+    background-color: #4CAF50;
     border-radius: 1vw;
     border: 1px solid #425f57;
-    color: #425f57;
+    color: white;
     height: 60%;
     display: flex;
     align-items: center;
@@ -115,7 +116,7 @@
     height: 50vw;
     margin-bottom: 5%;
     border-radius: 15px;
-    background-color: #2f9e44;
+    background-color: #4CAF50;
     user-select: none;
     z-index: 1;
 
@@ -149,9 +150,9 @@
     width: 100%;
     border: 1px solid #425f57;
     border-radius: 5px;
-    background-color: #cfff8d;
+    background-color: #4CAF50;
     position: absolute;
-    color: #425f57;
+    color: white;
     z-index: 1;
     padding: 5%;
     bottom: 15%;
