@@ -114,3 +114,138 @@ const renderNavigationItemsMobile = () => {
 };
 
 renderNavigationItemsMobile();
+
+export const integrantes = [
+  {
+    id: "camila",
+    img: "../img/integrantes/cami.jpeg",
+    name: "Camila Ortubey",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, quasi non corrupti dolores aspernatur sunt et! Temporibus, aperiam dolore! Necessitatibus",
+    social: [
+      {
+        id: "git",
+        icon: "../img/iconos/github.svg",
+        link: "https://github.com/Cami-cao96",
+      },
+      { id: "gmail", icon: "../img/iconos/gmail.svg" },
+      {
+        id: "linkedin",
+        icon: "../img/iconos/linkedin.svg",
+        link: "https://www.linkedin.com/in/camila-ortubey/",
+      },
+    ],
+  },
+  {
+    id: "giuli",
+    img: "../img/integrantes/giuli.jpeg",
+    name: "Giuliana Ambrosino",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, quasi non corrupti dolores aspernatur sunt et! Temporibus, aperiam dolore! Necessitatibus",
+    social: [
+      {
+        id: "git",
+        icon: "../img/iconos/github.svg",
+        link: "https://github.com/GiulianaAmbrosino",
+      },
+      { id: "gmai", icon: "../img/iconos/gmail.svg" },
+      {
+        id: "linkedin",
+        icon: "../img/iconos/linkedin.svg",
+        link: "https://www.linkedin.com/in/ambrosino-giuliana/",
+      },
+    ],
+  },
+  {
+    id: "mai",
+    img: "../img/integrantes/mai.jpeg",
+    name: "Mailen Alvarez",
+    description:
+      "Soy desarrolladora Web Full Stack, apasionada por el aprendizaje continuo, creativa y perseverante. <br>Disfruto juntarme con amigos, hacer música y nadar.",
+    social: [
+      {
+        id: "git",
+        icon: "../img/iconos/github.svg",
+        link: "https://github.com/Mailen93",
+      },
+      { id: "gmai", icon: "../img/iconos/gmail.svg" },
+      {
+        id: "linkedin",
+        icon: "../img/iconos/linkedin.svg",
+        link: "https://www.linkedin.com/in/mlabarrere/",
+      },
+    ],
+  },
+  {
+    id: "santi",
+    img: "../img/integrantes/santi.jpeg",
+    name: "Santiago Flores",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, quasi non corrupti dolores aspernatur sunt et! Temporibus, aperiam dolore! Necessitatibus",
+    social: [
+      {
+        id: "git",
+        icon: "../img/iconos/github.svg",
+        link: "https://github.com/AgustinCrow",
+      },
+      { id: "gmai", icon: "../img/iconos/gmail.svg" },
+      {
+        id: "linkedin",
+        icon: "../img/iconos/linkedin.svg",
+        link: "https://www.linkedin.com/in/santiago-agustin-flores/",
+      },
+    ],
+  },
+  {
+    id: "ema",
+    img: "../img/integrantes/ema.jpeg",
+    name: "Emanuel Gaona",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, quasi non corrupti dolores aspernatur sunt et! Temporibus, aperiam dolore! Necessitatibus",
+    social: [
+      {
+        id: "git",
+        icon: "../img/iconos/github.svg",
+        link: "https://github.com/Gaona21",
+      },
+      { id: "gmai", icon: "../img/iconos/gmail.svg" },
+      {
+        id: "linkedin",
+        icon: "../img/iconos/linkedin.svg",
+        link: "https://www.linkedin.com/in/gaonacorreaemanuel/",
+      },
+    ],
+  },
+];
+
+export const renderIntegrantes = () => {
+  const divIntegrantes = document.getElementById("div-integrantes");
+  divIntegrantes.innerHTML = integrantes
+    .map((item) => {
+      return `<div class="flex flex-col items-center">
+    <img
+      src=${item.img}
+      alt=${item.name}-foto
+      class="w-40 h-40 rounded-full mb-4"
+    />
+    <h3 class="text-lg font-bold text-green-900">${item.name}</h3>
+    <p class="text-gray-700 text-center">
+     ${item.description}
+    </p>
+    <div class="flex p-2 w-[150px] items-center justify-center">
+      ${item.social
+        .map(
+          (icon) =>
+            `<a href=${icon.link || ""} target=_blank ><img src=${
+              icon.icon
+            } alt=${icon.id} /></a>`
+        )
+        .join("")}
+    </div>
+  </div>
+    `;
+    })
+    .join("");
+};
+
+renderIntegrantes();
