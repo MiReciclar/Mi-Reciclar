@@ -74,8 +74,9 @@ var swiper = new Swiper(".swiper-container", {
   },
 });
 
-// ! NAVBAR DINAMICA
+// ! NAVBAR RENDER
 const navigationItems = [
+  { id: "inicio", label: "Inicio", nav: "inicio" },
   { id: "nuestraMision", label: "Nuestra Misión", nav: "/nuestraMision" },
   { id: "rencompensa", label: "Rencompensas", nav: "rencompensa" },
   { id: "jornadas", label: "Jornadas", nav: "jornadas" },
@@ -115,7 +116,45 @@ const renderNavigationItemsMobile = () => {
 
 renderNavigationItemsMobile();
 
-export const integrantes = [
+// ! NUESTROS VALORES RENDER
+const valores = [
+  {
+    id: "equipo",
+    descripcion:
+      "Valoramos la sostenibilidad y la preservación del medio ambiente para transformar la visión de un mundo más verde en una realidad",
+    img: "../img/valores/community.png",
+  },
+  {
+    id: "ideas",
+    descripcion:
+      "Abrazamos la innovación como motor de cambio, proponemos soluciones creativas para minimizar nuestro impacto ambiental",
+    img: "../img/valores/ideas.png",
+  },
+  {
+    id: "mas",
+    descripcion:
+      "Promovemos el diálogo y la difusión como herramientas clave para inspirar acciones colectivas y salvar el medio ambiente",
+    img: "../img/valores/dialogo.png",
+  },
+];
+
+const renderValores = () => {
+  const divValores = document.getElementById("div-valores");
+  divValores.innerHTML = valores.map((valor) => {
+    return `<div
+    class="flex max-w-[300px] flex-col items-center justify-center border-2 border-green-200 p-8 rounded-md shadowAndBlur gap-6"
+  >
+    <img src=${valor.img} alt=${valor.id} class="w-20 h-20" />
+    <p class="text-center">${valor.descripcion}
+    </p>
+  </div>`;
+  });
+};
+
+renderValores();
+
+// ! NUESTRO EQUIPO RENDER
+const integrantes = [
   {
     id: "camila",
     img: "../img/integrantes/cami.jpeg",
@@ -218,7 +257,7 @@ export const integrantes = [
   },
 ];
 
-export const renderIntegrantes = () => {
+const renderIntegrantes = () => {
   const divIntegrantes = document.getElementById("div-integrantes");
   divIntegrantes.innerHTML = integrantes
     .map((item) => {
