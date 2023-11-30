@@ -260,19 +260,19 @@ const integrantes = [
 const renderIntegrantes = () => {
   const divIntegrantes = document.getElementById("div-integrantes");
   divIntegrantes.innerHTML = integrantes
-    .map((item) => {
+    .map((integrante) => {
       return `<div class="flex flex-col items-center">
     <img
-      src=${item.img}
-      alt=${item.name}-foto
+      src=${integrante.img}
+      alt=${integrante.name}-foto
       class="w-40 h-40 rounded-full mb-4"
     />
-    <h3 class="text-lg font-bold text-green-900">${item.name}</h3>
-    <p class="text-gray-700 text-center">
-     ${item.description}
+    <h3 class="text-lg font-bold text-green-900">${integrante.name}</h3>
+    <p class="text-green-800 text-center">
+     ${integrante.description}
     </p>
     <div class="flex p-2 w-[150px] items-center justify-center">
-      ${item.social
+      ${integrante.social
         .map(
           (icon) =>
             `<a href=${icon.link || ""} target=_blank ><img src=${
