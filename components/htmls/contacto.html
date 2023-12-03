@@ -14,9 +14,82 @@
   <body>
     <main>
       <section
-        class="h-[200px] relative nosotros-sections bg-[url(../img/nosotros/spotgreen.jpg)] bg-cover bg-center bg-no-repeat flex pt-22"
+        class="h-[250px] relative nosotros-sections bg-[url(../img/nosotros/spotgreen.jpg)] bg-cover bg-center bg-no-repeat flex pt-22"
       >
-        <div class="absoulte w-full h-full top-0 bg-[rgba(F)] z-10"></div>
+        <div
+          class="absolute w-full h-full flex items-center justify-center top-0 z-10"
+        >
+          <div
+            class="text-white text-7xl font-bold flex items-center justify-center h-full"
+          >
+            Contacto
+          </div>
+        </div>
+        <div class="absolute w-full h-full top-0 bg-black z-0 opacity-25"></div>
+      </section>
+
+      <section class="relative z-20 flex justify-center items-center">
+        <div class="bg-white flex gap-8 justify-center items-start p-12 w-[900px] h-[450px] mt-[-50px] shadow-2xl ">
+          <form class="w-[60%] max-w-lg">
+            <div class="flex flex-wrap -mx-3 mb-6">
+              <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                <label
+                  class="block uppercase tracking-wide text-green-700 text-s font-bold mb-2"
+                  for="grid-first-name"
+                >
+                  Nombre
+                </label>
+                <input
+                  class="appearance-none block w-full bg-gray-200 text-green-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-green-500"
+                  id="grid-first-name"
+                  type="text"
+                  placeholder=""
+                />
+              </div>
+              <div class="w-full md:w-1/2 px-3">
+                <label
+                  class="block uppercase tracking-wide text-green-700 text-s font-bold mb-2"
+                  for="grid-last-name"
+                >
+                  Apellido
+                </label>
+                <input
+                  class="appearance-none block w-full bg-gray-200 text-green-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-green-500"
+                  id="grid-last-name"
+                  type="text"
+                  placeholder=""
+                />
+              </div>
+            </div>
+            <div class="flex flex-wrap -mx-3 mb-6">
+              <div class="w-full px-3">
+                <label
+                  class="block uppercase tracking-wide text-green-700 text-s font-bold mb-2"
+                  for="grid-password"
+                >
+                  Mensaje
+                </label>
+                <input
+                  class="appearance-none h-[150px] block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-green-500"
+                  id="grid-message"
+                  type="text"
+                  placeholder="Escriba su mensaje aquí"
+                />
+              </div>
+            </div>
+            <button
+            class="flex-shrink-0 w-full bg-green-500 hover:bg-green-700 text-lg text-white py-2 px-3 rounded"
+            type="button"
+          >
+            Enviar
+          </button>
+          </form>
+          
+             <div><img src="../img/pexels-jonathan-borba-6808140 (1).jpg" class="w-[250px] h-[52vh]" alt=""></div>
+              
+            </div>
+          </form>
+        </div>
       </section>
     </main>
   </body>
