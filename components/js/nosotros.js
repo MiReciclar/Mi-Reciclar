@@ -142,7 +142,7 @@ const renderValores = () => {
   const divValores = document.getElementById("div-valores");
   divValores.innerHTML = valores.map((valor) => {
     return `<div
-    class="flex max-w-[300px] flex-col items-center justify-center border-2 border-green-200 p-8 rounded-md shadowAndBlur gap-6"
+    class="flex text-green-900 max-w-[300px] flex-col items-center justify-center border-2 border-green-200 p-8 rounded-md shadowAndBlur gap-6"
   >
     <img src=${valor.img} alt=${valor.id} class="w-20 h-20" />
     <p class="text-center">${valor.descripcion}
@@ -240,7 +240,7 @@ const integrantes = [
     img: "../img/integrantes/ema.jpeg",
     name: "Emanuel Gaona",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, quasi non corrupti dolores aspernatur sunt et! Temporibus, aperiam dolore! Necessitatibus",
+      "Soy desarrollador web full stack apasionado por resolver problemas y enfrentar desafíos. Me gusta jugar al fútbol con amigos como una forma de divertirme.",
     social: [
       {
         id: "git",
@@ -261,14 +261,14 @@ const renderIntegrantes = () => {
   const divIntegrantes = document.getElementById("div-integrantes");
   divIntegrantes.innerHTML = integrantes
     .map((integrante) => {
-      return `<div class="flex flex-col items-center">
+      return `<div class="flex flex-col justify-between items-center">
     <img
       src=${integrante.img}
       alt=${integrante.name}-foto
       class="w-40 h-40 rounded-full mb-4"
     />
     <h3 class="text-lg font-bold text-green-900">${integrante.name}</h3>
-    <p class="text-green-800 text-center">
+    <p class="text-green-800 text-center max-w-[250px]">
      ${integrante.description}
     </p>
     <div class="flex p-2 w-[150px] items-center justify-center">
