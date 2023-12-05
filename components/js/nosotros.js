@@ -180,7 +180,7 @@ const integrantes = [
     img: "../img/integrantes/giuli.jpeg",
     name: "Giuliana Ambrosino",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, quasi non corrupti dolores aspernatur sunt et! Temporibus, aperiam dolore! Necessitatibus",
+      "Soy desarrolladora Web Full Stack con un gran interés en el desarrollo de entornos dinámicos y la seguridad informática.",
     social: [
       {
         id: "git",
@@ -240,7 +240,7 @@ const integrantes = [
     img: "../img/integrantes/ema.jpeg",
     name: "Emanuel Gaona",
     description:
-      "Soy desarrollador web full stack apasionado por resolver problemas y enfrentar desafíos. Me gusta jugar al fútbol con amigos como una forma de divertirme.",
+      "Soy desarrollador Web Full Stack apasionado por resolver problemas y enfrentar desafíos. Me gusta jugar al fútbol con amigos como una forma de divertirme.",
     social: [
       {
         id: "git",

@@ -8,7 +8,7 @@ const contacto = [
   },
   {
     id: "email",
-    img: "../img/contato/mail.png",
+    img: "../img/contacto/message.png",
     titulo: "Email",
     descripcion: "mireciclar@gmail.com",
   },
