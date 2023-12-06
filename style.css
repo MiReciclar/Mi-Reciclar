@@ -236,6 +236,7 @@ h1 {
   font-size: 2rem;
   margin-bottom: 2rem;
   position: relative;
+  text-align: center;
 }
 
 .front .inner p:after {
