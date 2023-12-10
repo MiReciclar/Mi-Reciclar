@@ -7,12 +7,12 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../styles/nav-foot.css" />
   <link rel="stylesheet" href="./style.css">
-  
+
   <title>Index</title>
 </head>
 
 <body>
-  <nav class="bg-green-600">
+  <nav class="bg-green-600" id="nav">
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
       <div class="relative flex h-20 items-center justify-between">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -91,122 +91,106 @@
     </div>
   </nav>
 
-  <!---->
-  <div class="banner">
-    <h1>Mi Reciclar</h1>
-  </div>
+  <!--inicio-->
+  <div class="banner"></div>
   <div class="content">
     <div class="wrapper">
       <h2>Mi Reciclar</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quos consequuntur aut? Animi, iusto laboriosam
-        perferendis praesentium repellendus iure labore ex atque quas deleniti? Harum incidunt odit voluptatum possimus
-        minus. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, quos aliquid? Expedita assumenda,
-        distinctio voluptas voluptatem, illo quia minima a quasi ut magni voluptates blanditiis id consectetur
-        aspernatur! Doloremque, eaque.</p> <br><br>
+      <p>Con "Mi Reciclar" la misión de proteger nuestro planeta se vuelve personal.<br>Cada acción cuenta, cada acción
+        suma y con esta aplicación te guíaremos de manera amigable y eficiente en tu viaje hacia un estilo de vida más
+        sustentable y amigable con el medio ambiente.</p> <br><br>
     </div>
 
     <!--CARDS-->
     <div class="wrappercards">
-      <h1>Manera correcta de reciclar</h1>
-      
+
+      <h1 id="guia">GUÍA DE RECICLAJE</h1>
+      <p>Todos los residuos deben estar <strong>LIMPIOS Y SECOS</strong> </p>
       <div>
         <div class="cols">
           <div class="col" ontouchstart="this.classList.toggle('hover');">
             <div class="container">
-              <div class="front" style="background-image: url(https://unsplash.it/500/500/)">
+              <div class="front" style="background-image: url(./components/img/img-index/papel-carton.jpg)">
                 <div class="inner">
-                  <p>Diligord</p>
-                  <span>Lorem ipsum</span>
+                  <p>PAPEL Y CARTON</p>
                 </div>
               </div>
               <div class="back">
                 <div class="inner">
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.
-                  </p>
+                  <p>Periódicos, revistas, cartón, cajas, papel de oficina y otros productos de papel.</p>
                 </div>
               </div>
             </div>
           </div>
           <div class="col" ontouchstart="this.classList.toggle('hover');">
             <div class="container">
-              <div class="front" style="background-image: url(https://unsplash.it/511/511/)">
+              <div class="front" style="background-image: url(./components/img/img-index/plastico.jpg)">
                 <div class="inner">
-                  <p>Rocogged</p>
-                  <span>Lorem ipsum</span>
+                  <p>PLÁSTICO</p>
                 </div>
               </div>
               <div class="back">
                 <div class="inner">
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.
-                  </p>
+                  <p>Botellas de plástico, envases de alimentos, bolsas de plástico, etc..</p>
                 </div>
               </div>
             </div>
           </div>
           <div class="col" ontouchstart="this.classList.toggle('hover');">
             <div class="container">
-              <div class="front" style="background-image: url(https://unsplash.it/502/502/)">
+              <div class="front" style="background-image: url(./components/img/img-index/metal.jpg)">
                 <div class="inner">
-                  <p>Strizzes</p>
-                  <span>Lorem ipsum</span>
+                  <p>METAL</p>
                 </div>
               </div>
               <div class="back">
                 <div class="inner">
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.
-                  </p>
+                  <p>Latas de aluminio, latas de acero, envases de metal, etc. </p>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
 
         <div class="cols">
           <div class="col" ontouchstart="this.classList.toggle('hover');">
             <div class="container">
-              <div class="front" style="background-image: url(https://unsplash.it/500/500/)">
+              <div class="front" style="background-image: url(./components/img/img-index/vidrio.jpeg)">
                 <div class="inner">
-                  <p>Diligord</p>
-                  <span>Lorem ipsum</span>
+                  <p>VIDRIO</p>
                 </div>
               </div>
               <div class="back">
                 <div class="inner">
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.
-                  </p>
+                  <p>Botellas y frascos de vidrio. Asegúrate de quitar las tapas y etiquetas antes de reciclar.</p>
                 </div>
               </div>
             </div>
           </div>
           <div class="col" ontouchstart="this.classList.toggle('hover');">
             <div class="container">
-              <div class="front" style="background-image: url(https://unsplash.it/511/511/)">
+              <div class="front" style="background-image: url(./components/img/img-index/electrodomesticos.jpeg)">
                 <div class="inner">
-                  <p>Rocogged</p>
-                  <span>Lorem ipsum</span>
+                  <p>ELECTRÓNICOS</p>
                 </div>
               </div>
               <div class="back">
                 <div class="inner">
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.
-                  </p>
+                  <p>Dispositivos electrónicos como teléfonos móviles, computadoras, impresoras, etc.</p>
                 </div>
               </div>
             </div>
           </div>
           <div class="col" ontouchstart="this.classList.toggle('hover');">
             <div class="container">
-              <div class="front" style="background-image: url(https://unsplash.it/502/502/)">
+              <div class="front" style="background-image: url(./components/img/img-index/neumaticos.jpg)">
                 <div class="inner">
-                  <p>Strizzes</p>
-                  <span>Lorem ipsum</span>
+                  <p>NEUMÁTICOS</p>
                 </div>
               </div>
               <div class="back">
                 <div class="inner">
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.
-                  </p>
+                  <p>Neumáticos usados para su reciclaje o reutilización en productos como caucho granulado</p>
                 </div>
               </div>
             </div>
@@ -214,10 +198,11 @@
         </div>
       </div>
     </div>
+
     <!--Jornadas Solidarias-->
+   
 
-
-
+    <!--Footer-->
     <footer class="py-6 bg-green-800 dark:text-gray-50">
       <div class="container px-6 mx-auto space-y-6 divide-y dark:divide-gray-400 md:space-y-12 divide-opacity-50">
         <div class="grid grid-cols-12">
