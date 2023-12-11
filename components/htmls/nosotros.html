@@ -1,8 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../img/logo-reciclar-removebg-preview.png"
+      type="image/x-icon"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@7.0.3/swiper-bundle.min.css"
@@ -49,33 +54,7 @@
               />
             </div>
             <div class="hidden sm:ml-6 sm:block">
-              <div class="flex space-x-3">
-                <a
-                  href="#"
-                  class="text-white hover:bg-green-800 rounded-md px-3 py-2 lg:text-lg font-medium text-sm"
-                  >Nuestra Misión</a
-                >
-                <a
-                  href="#"
-                  class="text-white hover:bg-green-800 rounded-md px-3 py-2 lg:text-lg font-medium text-sm"
-                  >Recompensas</a
-                >
-                <a
-                  href="../htmls/voluntariados.html"
-                  class="text-white hover:bg-green-800 rounded-md px-3 py-2 lg:text-lg font-medium text-sm"
-                  >Jornadas</a
-                >
-                <a
-                  href="#"
-                  class="text-white hover:bg-green-800 rounded-md px-3 py-2 lg:text-lg font-medium text-sm"
-                  >Eco Noticias</a
-                >
-                <a
-                  href="#"
-                  class="text-white hover:bg-green-800 rounded-md px-3 py-2 lg:text-lg font-medium text-sm"
-                  >Contacto</a
-                >
-              </div>
+              <div id="navContainer" class="flex space-x-3"></div>
             </div>
           </div>
 
@@ -140,78 +119,39 @@
       </div>
 
       <!-- Menu mobile -->
-      <div class="md:hidden hidden" id="mobile-menu">
-        <div class="space-y-1 px-2 pb-3 pt-2">
-          <a
-            href="#"
-            class="text-white hover:bg-green-800 block rounded-md px-3 py-2 text-base font-medium"
-            >Nuestra Misión</a
-          >
-          <a
-            href="#"
-            class="text-white hover:bg-green-800 block rounded-md px-3 py-2 text-base font-medium"
-            >Recompensas</a
-          >
-          <a
-            href="#"
-            class="text-white hover:bg-green-800 block rounded-md px-3 py-2 text-base font-medium"
-            >Jornadas</a
-          >
-          <a
-            href="#"
-            class="text-white hover:bg-green-800 block rounded-md px-3 py-2 text-base font-medium"
-            >Eco Noticias</a
-          >
-          <a
-            href="#"
-            class="text-white hover:bg-green-800 block rounded-md px-3 py-2 text-base font-medium"
-            >Contacto</a
-          >
-        </div>
-      </div>
+      <div class="md:hidden hidden flex flex-columns" id="mobile-menu"></div>
     </nav>
     <main>
       <section
-        class="relative bg-[url(../img/botellas-zoom.jpg)] bg-cover bg-center bg-no-repeat"
+        class="relative nosotros-sections bg-[url(../img/nosotros/spotgreen.jpg)] bg-cover bg-center bg-no-repeat flex flex-col pt-22"
       >
-        <div
-          class="absolute inset-0 bg-gradient-to-r from-white/95 to-white/25"
-        ></div>
-
-        <div
-          class="relative mx-20 max-w-screen-xl px-4 py-20 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
-        >
-          <div
-            class="max-w-xl flex-column space-y-10 ltr:sm:text-left rtl:sm:text-right"
-          >
-            <h1 class="font-extrabold text-green-700 text-5xl">
-              Mi ReciclAR
-
-              <strong class="block text-3xl font-extrabold text-green-900">
-                Empezá a ayudar
-              </strong>
+        <div class="flex justify-evenly items-center w-full mb-20">
+          <div>
+            <h1 class="font-extrabold text-green-700 text-[72px]">
+              Mi Reciclar
             </h1>
-
-            <p class="mt-2 max-w-lg text-green-900 sm:text-xl/relaxed">
-              Somos tu guía hacia un estilo de vida más sustentable. Cada gesto
-              cuenta, cada acción suma. <br />Explorá cómo el reciclaje puede
-              transformar nuestro mundo y descubrí recompensas por cada paso
-              ecológico que das. <br />Unite a la comunidad de cambio para
-              generar un impacto duradero. <br />
-              <strong>¡Empecemos a reciclar hoy!</strong>
-            </p>
-
-            <div class="flex mt-6 flex-wrap gap-4 text-center frame">
-              <a href="#section-create">
-                <button
-                  class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full"
-                >
-                  Vamos!
-                </button>
-              </a>
+            <h2 class="text-3xl font-extrabold text-green-900">
+              Sobre Nosotros
+            </h2>
+          </div>
+          <div>
+            <div
+              class="flex justify-center text-green-900 tracking-wide items-center pt-10"
+            >
+              <p class="max-w-[600px] text-green-900 font-bold text-lg">
+                En la vanguardia del reciclaje y la sostenibilidad, nuestra
+                misión es transformar la visión de un futuro más verde en una
+                realidad palpable. Guiados por la innovación, el diálogo abierto
+                y la responsabilidad compartida, forjamos un camino hacia un
+                mundo más sostenible para las generaciones venideras
+              </p>
             </div>
           </div>
         </div>
+        <div
+          id="div-valores"
+          class="flex w-full justify-center gap-8 font-semibold mt-4"
+        ></div>
       </section>
 
       <section
@@ -220,20 +160,20 @@
       >
         <div class="relative ml-8 w-[50%] h-[500px]">
           <img
-            src="../img/mano-planta.jpg"
+            src="../img/nosotros/mano-planta.jpg"
             alt="Imagen 1"
-            class="reveal-on-scroll absolute top-0 left-0 w-2/3 h-2/3 object-cover"
+            class="reveal-on-scroll absolute top-0 left-0 w-2/3 h-2/3 object-cover rounded-lg"
           />
           <img
-            src="../img/bolsa-celu.jpg"
+            src="../img/nosotros/bolsa-celu.jpg"
             alt="Imagen 2"
-            class="reveal-on-scroll2 absolute bottom-0 right-0 w-2/3 h-2/3 object-cover"
+            class="reveal-on-scroll2 absolute bottom-0 right-0 w-2/3 h-2/3 object-cover rounded-lg"
           />
         </div>
 
         <div class="justify-center items-center flex w-1/2">
           <div class="flex-column reveal-on-scroll-text items-center mx-auto">
-            <h2 class="text-5xl tracking-wide font-bold pb-2 text-green-900">
+            <h2 class="text-5xl tracking-wide font-bold text-green-900">
               Nuestra Misión
             </h2>
             <div class="h-1 w-[51vh] bg-green-600"></div>
@@ -260,19 +200,23 @@
         class="mb-[200px] flex justify-center items-center"
       >
         <div class="container justify-center items-center flex">
-          <div class="w-[500px] h-[680px] p-8 reveal-on-scroll">
-            <img src="../img/equipo-nosotros.jpg" alt="" />
+          <div
+            class="w-[500px] shadow-xl flex justify-center items-center p-8 reveal-on-scroll"
+          >
+            <img
+              src="../img/nosotros/equipo-nosotros.jpg"
+              alt=""
+              class="rounded-lg"
+            />
           </div>
           <div class="justify-center items-center flex w-1/2">
             <div class="flex-column items-center mx-auto reveal-on-scroll-text">
-              <h2 class="text-5xl tracking-wide font-bold pb-2 text-green-900">
+              <h2 class="text-5xl tracking-wide font-bold text-green-900">
                 Nuestro Equipo
               </h2>
               <div class="h-1 w-[52vh] bg-green-600"></div>
 
-              <p
-                class="mt-5 max-w-lg tracking-wide sm:text-xl/relaxed text-green-900"
-              >
+              <p class="mt-5 max-w-lg tracking-wide sm:text-xl/relaxed">
                 Mi ReciclAR está compuesto por un grupo de jóvenes programadores
                 entusiastas que buscan combinar sus conocimientos en tecnología
                 con un propósito social y humanitario. <br />Creemos
@@ -294,7 +238,7 @@
               <!-- Slide 1 -->
               <div class="swiper-slide">
                 <img
-                  src="../img/pescarbanner.jpg"
+                  src="../img/nosotros/pescarbanner.jpg"
                   alt="Slide 1"
                   class="w-full max-h-[300px] object-cover"
                 />
@@ -302,7 +246,7 @@
               <!-- Slide 2 -->
               <div class="swiper-slide">
                 <img
-                  src="../img/banerrpescar.jpeg"
+                  src="../img/nosotros/banerrpescar.jpeg"
                   alt="Slide 2"
                   class="w-full max-h-[300px] object-cover"
                 />
@@ -310,7 +254,7 @@
               <!-- Slide 3 -->
               <div class="swiper-slide">
                 <img
-                  src="../img/centralparrk.jpg"
+                  src="../img/nosotros/centralparrk.jpg"
                   alt="Slide 3"
                   class="w-full max-h-[300px] object-cover"
                 />
@@ -318,14 +262,14 @@
               <!-- Slide 4 -->
               <div class="swiper-slide">
                 <img
-                  src="../img/charlas-zoom.jpg"
+                  src="../img/nosotros/charlas-zoom.jpg"
                   alt="Slide 5"
                   class="w-full max-h-[300px] object-cover"
                 />
               </div>
               <div class="swiper-slide">
                 <img
-                  src="../img/artech.jpg"
+                  src="../img/nosotros/artech.jpg"
                   alt="Slide 6"
                   class="w-full max-h-[300px] object-cover"
                 />
@@ -342,132 +286,21 @@
         </div>
       </section>
 
-      <section id="equipo" class="py-16 bg-gray-100 m-10">
+      <section
+        id="equipo"
+        class="rounded-lg py-16 bg-[url('../img/nosotros/hojitas.jpg')] m-10"
+      >
         <div class="container mx-auto">
-          <h2 class="text-5xl font-bold text-center mb-11 text-green-900">
-            Nuestro Equipo
-          </h2>
-
           <div
-            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8"
+            class="flex mb-10 bg-green-200 h-[80px] w-[90%] mx-auto rounded-lg items-center justify-center"
           >
-            <!-- Integrante 1 -->
-            <div class="flex flex-col items-center">
-              <img
-                src="../img/integrantes/cami.jpeg"
-                alt="Camila Ortubey"
-                class="w-40 h-40 rounded-full mb-4"
-              />
-              <h3 class="text-lg font-bold text-green-900">Camila Ortubey</h3>
-              <p class="text-gray-700 text-center">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
-                quasi non corrupti dolores aspernatur sunt et! Temporibus,
-                aperiam dolore! Necessitatibus!
-              </p>
-              <div class="flex p-2 w-14 items-center justify-center">
-                <img src="../img/iconos/GitHub-Logo.wine (1).svg" alt="" />
-                <img src="../img/iconos/Gmail-Logo.wine (1).svg" alt="" />
-                <img
-                  src="../img/iconos/LinkedIn-Icon-Black-Logo.wine.svg"
-                  alt=""
-                />
-              </div>
-            </div>
-
-            <!-- Integrante 2 -->
-            <div class="flex flex-col items-center">
-              <img
-                src="../img/integrantes/ema.jpeg"
-                alt="Emanuel Gaona"
-                class="w-40 h-40 rounded-full mb-4"
-              />
-              <h3 class="text-lg font-bold text-green-900">Emanuel Gaona</h3>
-              <p class="text-gray-700 text-center">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
-                neque aut in nisi voluptate illum tenetur, numquam ipsa quos
-                mollitia.
-              </p>
-              <div class="flex p-2 w-14 items-center justify-center">
-                <img src="../img/iconos/GitHub-Logo.wine (1).svg" alt="" />
-                <img src="../img/iconos/Gmail-Logo.wine (1).svg" alt="" />
-                <img
-                  src="../img/iconos/LinkedIn-Icon-Black-Logo.wine.svg"
-                  alt=""
-                />
-              </div>
-            </div>
-
-            <!-- Integrante 3 -->
-            <div class="flex flex-col items-center">
-              <img
-                src="../img/integrantes/giuli.jpeg"
-                alt="Giuliana Ambrosino"
-                class="w-40 h-40 rounded-full mb-4"
-              />
-              <h3 class="text-lg font-bold text-green-900">
-                Giuliana Ambrosino
-              </h3>
-              <p class="text-gray-700 text-center">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-                nesciunt inventore minima reprehenderit quaerat aspernatur
-                eveniet eligendi.
-              </p>
-              <div class="flex p-2 w-14 items-center justify-center">
-                <img src="../img/iconos/GitHub-Logo.wine (1).svg" alt="" />
-                <img src="../img/iconos/Gmail-Logo.wine (1).svg" alt="" />
-                <img
-                  src="../img/iconos/LinkedIn-Icon-Black-Logo.wine.svg"
-                  alt=""
-                />
-              </div>
-            </div>
-
-            <!-- Integrante 4 -->
-            <div class="flex flex-col items-center">
-              <img
-                src="../img/integrantes/mai.jpeg"
-                alt="Mailen Alvarez"
-                class="w-40 h-40 rounded-full mb-4"
-              />
-              <h3 class="text-lg font-bold text-green-900">Mailen Alvarez</h3>
-              <p class="text-gray-700 text-center">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Consectetur sapiente eligendi qui, totam alias tempore similique
-                nihil in vero obcaecati!
-              </p>
-              <div class="flex p-2 w-14 items-center justify-center">
-                <img src="../img/iconos/GitHub-Logo.wine (1).svg" alt="" />
-                <img src="../img/iconos/Gmail-Logo.wine (1).svg" alt="" />
-                <img
-                  src="../img/iconos/LinkedIn-Icon-Black-Logo.wine.svg"
-                  alt=""
-                />
-              </div>
-            </div>
-
-            <!-- Integrante 5 -->
-            <div class="flex flex-col items-center">
-              <img
-                src="../img/integrantes/santi.jpeg"
-                alt="Santiago Flores"
-                class="w-40 h-40 rounded-full mb-4"
-              />
-              <h3 class="text-lg font-bold text-green-900">Santiago Flores</h3>
-              <p class="text-gray-700 text-center">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Assumenda ratione accusamus voluptatibus neque nihil ullam rem
-                nobis distinctio nam asperiores.
-              </p>
-              <div class="flex p-2 w-14 items-center justify-center">
-                <img src="../img/iconos/GitHub-Logo.wine (1).svg" alt="" />
-                <img src="../img/iconos/Gmail-Logo.wine (1).svg" alt="" />
-                <img
-                  src="../img/iconos/LinkedIn-Icon-Black-Logo.wine.svg"
-                  alt=""
-                />
-              </div>
-            </div>
+            <h2
+              class="text-5xl tracking-wide font-bold text-center text-green-900"
+            >
+              Nosotros
+            </h2>
           </div>
+          <div id="div-integrantes" class="flex gap-4 justify-center"></div>
         </div>
       </section>
     </main>
@@ -600,7 +433,7 @@
               rel="noopener noreferrer"
               href="#"
               title="Email"
-              class="flex items-center justify-center w-10 h-10 rounded-full bg-green-600"
+              class="flex items-center justify-center w-10 h-10 rounded-full bg-green-600 hover:bg-green-900"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -620,7 +453,7 @@
               rel="noopener noreferrer"
               href="#"
               title="Twitter"
-              class="flex items-center justify-center w-10 h-10 rounded-full bg-green-600"
+              class="flex items-center justify-center w-10 h-10 rounded-full bg-green-600 hover:bg-green-900"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -637,7 +470,7 @@
               rel="noopener noreferrer"
               href="#"
               title="GitHub"
-              class="flex items-center justify-center w-10 h-10 rounded-full bg-green-600"
+              class="flex items-center justify-center w-10 h-10 rounded-full bg-green-600 hover:bg-green-900"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -656,6 +489,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@7.0.3/swiper-bundle.min.js"></script>
-    <script src="../js/nosotros.js"></script>
+    <script src="../js/nav-foot.js"></script>
+    <script type="module" src="../js/nosotros.js"></script>
   </body>
 </html>

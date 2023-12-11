@@ -1,26 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../styles/nav-foot.css" />
-    <link rel="stylesheet" href="../styles/style.css">
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
+      rel="shortcut icon"
+      href="../img/logo-reciclar-removebg-preview.png"
+      type="image/x-icon"
     />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-
-    <title>Index</title>
+    <link rel="stylesheet" href="../styles/nav-foot.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Contacto</title>
   </head>
-  <body class="">
+  <body>
     <nav class="bg-green-600">
       <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-20 items-center justify-between">
@@ -51,33 +43,7 @@
               />
             </div>
             <div class="hidden sm:ml-6 sm:block">
-              <div class="flex space-x-3">
-                <a
-                  href="../htmls/nosotros.html"
-                  class="text-white hover:bg-green-800 rounded-md px-3 py-2 lg:text-lg font-medium text-sm"
-                  >Nuestra Misión</a
-                >
-                <a
-                  href="#"
-                  class="text-white hover:bg-green-800 rounded-md px-3 py-2 lg:text-lg font-medium text-sm"
-                  >Recompensas</a
-                >
-                <a
-                  href="../htmls/voluntariados.html"
-                  class="text-white hover:bg-green-800 rounded-md px-3 py-2 lg:text-lg font-medium text-sm"
-                  >Jornadas</a
-                >
-                <a
-                  href="#"
-                  class="text-white hover:bg-green-800 rounded-md px-3 py-2 lg:text-lg font-medium text-sm"
-                  >Eco Noticias</a
-                >
-                <a
-                  href="#"
-                  class="text-white hover:bg-green-800 rounded-md px-3 py-2 lg:text-lg font-medium text-sm"
-                  >Contacto</a
-                >
-              </div>
+              <div id="navContainer" class="flex space-x-3"></div>
             </div>
           </div>
 
@@ -132,7 +98,7 @@
                   class="block px-4 py-2 text-lg text-green-800"
                   role="menuitem"
                   tabindex="-1"
-                  id="user-menu-item-1"
+                  id="user-menu-item-2"
                   >Eco Memo</a
                 >
               </div>
@@ -142,107 +108,110 @@
       </div>
 
       <!-- Menu mobile -->
-      <div class="md:hidden hidden" id="mobile-menu">
-        <div class="space-y-1 px-2 pb-3 pt-2">
-          <a
-            href="#"
-            class="text-white hover:bg-green-800 block rounded-md px-3 py-2 text-base font-medium"
-            >Nuestra Misión</a
-          >
-          <a
-            href="#"
-            class="text-white hover:bg-green-800 block rounded-md px-3 py-2 text-base font-medium"
-            >Recompensas</a
-          >
-          <a
-            href="#"
-            class="text-white hover:bg-green-800 block rounded-md px-3 py-2 text-base font-medium"
-            >Jornadas</a
-          >
-          <a
-            href="#"
-            class="text-white hover:bg-green-800 block rounded-md px-3 py-2 text-base font-medium"
-            >Eco Noticias</a
-          >
-          <a
-            href="#"
-            class="text-white hover:bg-green-800 block rounded-md px-3 py-2 text-base font-medium"
-            >Contacto</a
-          >
-        </div>
-      </div>
+      <div class="md:hidden hidden flex flex-columns" id="mobile-menu"></div>
     </nav>
-
     <main>
-      <header class="contentOne">
-        <div class="bannerOne">
-          <h1>
-            RECICLÁ EL PRESENTE,<br />TRANSFORMA EL FUTURO<br />NUESTRA APP,<br />TU
-            PLANETA
-          </h1>
-          <button type="button" class="btn btn-success">Descargar</button>
-        </div>
-      </header>
-
-      <br />
-
-      <header class="contentTwo">
-        <div class="bannerTwo">
-          <h2>CADA GESTO SUMA, CADA ACCION CUENTA</h2>
-          <br />
-          <h3>
-            Explorá cómo el Reciclaje<br />puede transforar nuestro mundo<br />y
-            descubrí recompensas por cada paso ecológico que das
-          </h3>
-        </div>
-      </header>
-
-      <br />
-
-      <header class="contenThree">
-        <div class="bannerThree">
-          <h2>¿Como se reciclá?</h2>
-          <br />
-
-          <div class="card">
-            <div class="face front">
-              <img src="../img/img-index/papeldos.jpg" alt="Papel" />
-              <h3>PAPEL</h3>
-            </div>
-
-            <div class="face back">
-              <h3>PAPEL</h3>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Adipisci aliquam sint neque id! Accusantium ipsa tenetur, ipsum
-                expedita fugiat velit obcaecati quam. Aliquid ipsa ipsam facere
-                a quidem sint quo.
-              </p>
-            </div>
+      <section
+        class="h-[250px] relative nosotros-sections bg-[url(../img/nosotros/spotgreen.jpg)] bg-cover bg-center bg-no-repeat flex pt-22"
+      >
+        <div
+          class="absolute w-full h-full flex items-center justify-center top-0 z-10"
+        >
+          <div
+            class="text-white text-7xl font-bold flex items-center justify-center h-full"
+          >
+            Contacto
           </div>
         </div>
-      </header>
-      <h2 id="jornadas">JORNADAS SOLIDARIAS</h2>
-      <section class="image-container">
-        <div class="image">
-          <img src="../img/img-index/reforestacion.jpg" alt="REFORESTACION" />
-          <button class="image-button">REFORESTACION</button>
+        <div class="absolute w-full h-full top-0 bg-black z-0 opacity-25"></div>
+      </section>
+
+      <section class="relative z-20 flex justify-center items-center">
+        <div
+          class="bg-white rounded-xl flex gap-8 justify-center items-start p-12 w-[900px] h-[450px] mt-[-50px] shadow-2xl"
+        >
+          <form class="w-[60%] max-w-lg">
+            <div class="flex flex-wrap -mx-3 mb-6">
+              <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                <label
+                  class="block uppercase tracking-wide text-green-700 text-s font-bold mb-2"
+                  for="grid-first-name"
+                >
+                  Nombre
+                </label>
+                <input
+                  class="appearance-none block w-full bg-gray-200 text-green-700 border border-gray-200 rounded-xl py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-green-500"
+                  id="grid-first-name"
+                  type="text"
+                  placeholder=""
+                />
+              </div>
+              <div class="w-full md:w-1/2 px-3">
+                <label
+                  class="block uppercase tracking-wide text-green-700 text-s font-bold mb-2"
+                  for="grid-last-name"
+                >
+                  Apellido
+                </label>
+                <input
+                  class="appearance-none block w-full bg-gray-200 text-green-700 border border-gray-200 rounded-xl py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-green-500"
+                  id="grid-last-name"
+                  type="text"
+                  placeholder=""
+                />
+              </div>
+            </div>
+            <div class="flex flex-wrap -mx-3 mb-6">
+              <div class="w-full px-3">
+                <label
+                  class="block uppercase tracking-wide text-green-700 text-s font-bold mb-2"
+                  for="grid-password"
+                >
+                  Mensaje
+                </label>
+                <input
+                  class="appearance-none h-[150px] block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded-xl py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-green-500"
+                  id="grid-message"
+                  type="text"
+                  placeholder=""
+                />
+              </div>
+            </div>
+            <button
+              class="flex-shrink-0 w-full bg-green-500 hover:bg-green-700 text-lg text-white py-2 px-3 rounded"
+              type="button"
+            >
+              Enviar
+            </button>
+          </form>
+          <div>
+            <img
+              src="../img/pexels-jonathan-borba-6808140 (1).jpg"
+              class="w-[250px] h-[52vh]"
+              alt=""
+            />
+          </div>
         </div>
-        <div class="image">
-          <img src="../img/img-index/educacion.png" alt="EDUCACION" />
-          <button class="image-button">EDUCACION</button>
-        </div>
-        <div class="image">
-          <img src="../img/img-index/carreraverde.jpg" alt="CARRERA_VERDER" />
-          <button class="image-button">CARRERA VERDE</button>
-        </div>
-        <div class="image">
-          <img src="../img/img-index/limpieza.jpg" alt="limpieza" />
-          <button class="image-button">LIMPIEZA</button>
+      </section>
+
+      <section class="flex h-[200px] justify-center items-center gap-3 m-10">
+        <div
+          id="divContacto"
+          class="h-[200px] flex flex-col justify-center p-2 gap-4"
+        ></div>
+        <div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.2554604051925!2d-58.37916752445031!3d-34.64825085985112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb522e83ffe1%3A0x9950f0fb48890f5d!2sEdificio%20Central%20Park%2C%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1701889649344!5m2!1ses!2sar"
+            width="800"
+            height="200"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </section>
     </main>
-
     <footer class="py-6 bg-green-800 dark:text-gray-50">
       <div
         class="container px-6 mx-auto space-y-6 divide-y dark:divide-gray-400 md:space-y-12 divide-opacity-50"
@@ -315,7 +284,8 @@
               <li>
                 <a
                   rel="noopener noreferrer"
-                  href="#"
+                  href="https://www.linkedin.com/in/mlabarrere/"
+                  target="_blank"
                   class="hover:text-green-500"
                   >Mailen Alvarez</a
                 >
@@ -323,7 +293,8 @@
               <li>
                 <a
                   rel="noopener noreferrer"
-                  href="#"
+                  href="https://www.linkedin.com/in/ambrosino-giuliana"
+                  target="_blank"
                   class="hover:text-green-500"
                   >Giuliana Ambrosino</a
                 >
@@ -331,7 +302,8 @@
               <li>
                 <a
                   rel="noopener noreferrer"
-                  href="#"
+                  href="https://www.linkedin.com/in/camila-ortubey/"
+                  target="_blank"
                   class="hover:text-green-500"
                   >Camila Ortubey</a
                 >
@@ -339,7 +311,8 @@
               <li>
                 <a
                   rel="noopener noreferrer"
-                  href="#"
+                  href="https://www.linkedin.com/in/santiago-agustin-flores/"
+                  target="_blank"
                   class="hover:text-green-500"
                   >Santiago Flores</a
                 >
@@ -347,7 +320,8 @@
               <li>
                 <a
                   rel="noopener noreferrer"
-                  href="#"
+                  href="https://www.linkedin.com/in/gaonacorreaemanuel"
+                  target="_blank"
                   class="hover:text-green-500"
                   >Emanuel Gaona</a
                 >
@@ -366,7 +340,7 @@
               rel="noopener noreferrer"
               href="#"
               title="Email"
-              class="flex items-center justify-center w-10 h-10 rounded-full bg-green-600"
+              class="flex items-center justify-center w-10 h-10 rounded-full bg-green-600 hover:bg-green-900"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -386,7 +360,7 @@
               rel="noopener noreferrer"
               href="#"
               title="Twitter"
-              class="flex items-center justify-center w-10 h-10 rounded-full bg-green-600"
+              class="flex items-center justify-center w-10 h-10 rounded-full bg-green-600 hover:bg-green-900"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -403,7 +377,7 @@
               rel="noopener noreferrer"
               href="#"
               title="GitHub"
-              class="flex items-center justify-center w-10 h-10 rounded-full bg-green-600"
+              class="flex items-center justify-center w-10 h-10 rounded-full bg-green-600 hover:bg-green-900"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -420,6 +394,7 @@
         </div>
       </div>
     </footer>
+    <script src="../js/contacto.js"></script>
     <script src="../js/nav-foot.js"></script>
   </body>
 </html>
