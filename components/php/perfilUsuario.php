@@ -1,3 +1,27 @@
+<?php
+
+  session_start();
+
+  if(!isset($_SESSION['id'])){
+    header("location:../php/register.php");
+    session_destroy();
+  }else{
+    include 'conexion_bd.php';
+
+    $id = $_SESSION['id'];
+
+    $consulta = "SELECT * FROM usuario WHERE id = '$id'";
+    $resultado = mysqli_query($conectar, $consulta);
+
+    $datos_usuario = mysqli_fetch_array($resultado);
+
+    $nombre = $datos_usuario['nombre'];
+    $apellido = $datos_usuario['apellido'];
+    $usuario = $datos_usuario['usuario'];
+  }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -171,7 +195,7 @@
             <div class="usuario-info-cont">
                 <div class="nombre-cont contenido-cont">
                     <h3>Usuario</h3>
-                    <div class="nombre-usuario">Andres C.</div>
+                    <div class="nombre-usuario"><?php echo ucfirst($usuario) ?></div>
                     <div class="btn-modificar modif-nombre"></div>
                     <!-- ver como implemetar el btn para modificar el nombre -->
                 </div>

@@ -12,7 +12,7 @@
     <main class="main dos">
         <div class="cont-form">
             <!-- Login -->
-            <form id="login-form" class="form" action="" method="POST">
+            <form id="login-form" class="form" action="./login_usuario.php" method="POST">
                 <h2 class="titulo-form">Iniciar Sesion</h2>
     
                 <input class="user-name" type="text" name="username" placeholder="Nombre de usuario" required>
