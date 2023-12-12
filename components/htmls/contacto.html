@@ -8,10 +8,108 @@
       href="../img/logo-reciclar-removebg-preview.png"
       type="image/x-icon"
     />
+    <link rel="stylesheet" href="../styles/nav-foot.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Contacto</title>
   </head>
   <body>
+    <nav class="bg-green-600">
+      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-20 items-center justify-between">
+          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <!-- Hamburguesa mobile -->
+            <button
+              type="button"
+              id="hamburger"
+              class="relative flex-column items-center justify-center rounded-md p-2 text-white hover:bg-green-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+              <div id="bar1" class="bar"></div>
+              <div id="bar2" class="bar"></div>
+              <div id="bar3" class="bar"></div>
+            </button>
+          </div>
+
+          <div
+            class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
+          >
+            <!-- Links navbar  -->
+            <div class="flex flex-shrink-0 items-center">
+              <img
+                class="h-12 w-auto rounded-full bg-white"
+                src="/components/img/logo-reciclar-removebg-preview.png"
+                alt="Mi Reciclar"
+              />
+            </div>
+            <div class="hidden sm:ml-6 sm:block">
+              <div id="navContainer" class="flex space-x-3"></div>
+            </div>
+          </div>
+
+          <div
+            class="absolute inset-y-0 right-0 flex items-center sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+          >
+            <!-- Usuario -->
+            <div class="relative ml-3">
+              <div>
+                <button
+                  type="button"
+                  class="relative flex rounded-full focus:ring-2 focus:ring-green-800"
+                  id="user-menu-button"
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                >
+                  <img
+                    class="h-11 w-11 rounded-full"
+                    src="/components/img/image-removebg-preview (1).png"
+                    alt="emoji-usuario"
+                  />
+                </button>
+              </div>
+
+              <!-- MODAL USUARIO -->
+              <div
+                id="user-menu"
+                class="opacity-0 absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none transition opacity transform duration-300 ease-out"
+                role="menu"
+                aria-orientation="vertical"
+                aria-labelledby="user-menu-button"
+                tabindex="-1"
+              >
+                <a
+                  href="../htmls/perfilUsuario.html"
+                  class="block px-4 py-2 text-lg text-green-800"
+                  role="menuitem"
+                  tabindex="-1"
+                  id="user-menu-item-0"
+                  >Mi Perfil</a
+                >
+                <a
+                  href="../htmls/register.html"
+                  class="block px-4 py-2 text-lg text-green-800"
+                  role="menuitem"
+                  tabindex="-1"
+                  id="user-menu-item-1"
+                  >Iniciar Sesión</a
+                >
+                <a
+                  href="../htmls/Eco-Memo.html"
+                  class="block px-4 py-2 text-lg text-green-800"
+                  role="menuitem"
+                  tabindex="-1"
+                  id="user-menu-item-2"
+                  >Eco Memo</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menu mobile -->
+      <div class="md:hidden hidden flex flex-columns" id="mobile-menu"></div>
+    </nav>
     <main>
       <section
         class="h-[250px] relative nosotros-sections bg-[url(../img/nosotros/spotgreen.jpg)] bg-cover bg-center bg-no-repeat flex pt-22"
@@ -114,7 +212,6 @@
         </div>
       </section>
     </main>
-
     <footer class="py-6 bg-green-800 dark:text-gray-50">
       <div
         class="container px-6 mx-auto space-y-6 divide-y dark:divide-gray-400 md:space-y-12 divide-opacity-50"
@@ -298,5 +395,6 @@
       </div>
     </footer>
     <script src="../js/contacto.js"></script>
+    <script src="../js/nav-foot.js"></script>
   </body>
 </html>
