@@ -62,9 +62,11 @@
 }
 
 .card-text-resume {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
     text-overflow: ellipsis;
     overflow: hidden;
-    -moz-line-clamp: 3;
 }
 .card-text-resume, .card-text-title{
     max-width: 300px;
