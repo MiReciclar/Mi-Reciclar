@@ -76,12 +76,16 @@ var swiper = new Swiper(".swiper-container", {
 
 // ! NAVBAR RENDER
 const navigationItems = [
-  { id: "inicio", label: "Inicio", nav: "inicio" },
-  { id: "nuestraMision", label: "Nuestra Misión", nav: "/nuestraMision" },
+  { id: "inicio", label: "Inicio", nav: "/index.html" },
+  {
+    id: "nuestraMision",
+    label: "Nuestra Misión",
+    nav: "../htmls/nosotros.html",
+  },
   { id: "rencompensa", label: "Rencompensas", nav: "rencompensa" },
-  { id: "jornadas", label: "Jornadas", nav: "jornadas" },
+  { id: "jornadas", label: "Jornadas", nav: "../htmls/voluntariados.html" },
   { id: "ecoNoticias", label: "Eco noticias", nav: "ecoNoticias" },
-  { id: "contacto", label: "Contacto", nav: "contacto" },
+  { id: "contacto", label: "Contacto", nav: "../htmls/contacto.html" },
 ];
 
 const renderNavigationItems = () => {
