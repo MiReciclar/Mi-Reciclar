@@ -28,8 +28,9 @@
   box-sizing: border-box;
 
 }
-
-
+.body{
+  text-align: center;
+}
 .wrapper {
   width: 90%;
   margin: 0 auto;
@@ -38,6 +39,8 @@
 
 #nav {
   position: fixed;
+  width:100%;
+  top: 0;
 }
 
 
@@ -84,7 +87,7 @@
 .content p {
   padding: 2% 0;
   line-height: 30px;
-  text-align: cent;
+  text-align: center;
 }
 
 /* cards */
@@ -97,6 +100,8 @@
   color: #3c814a;
   font-weight: bold
 }
+
+
 
 .wrappercads {
   width: 100%;
@@ -280,4 +285,4 @@
   }
 }
 
-/* JORNADAS */
+/* JORNADAS /*
