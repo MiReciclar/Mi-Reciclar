@@ -12,10 +12,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../styles/nav-foot.css" />
     <link rel="stylesheet" href="../styles/style.css" />
-    <link rel="stylesheet" href="../styles/Recompensas.css" />
+    <link rel="stylesheet" href="../styles/recompensas.css" />
   </head>
 
-  <body>
+  <body class="w-full">
     <nav class="bg-green-600">
       <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-20 items-center justify-between">
@@ -114,34 +114,18 @@
       <div class="md:hidden hidden flex flex-columns" id="mobile-menu"></div>
     </nav>
       <section class="flex justify-center items-center w-full p-10">
-        <div class="bg-[url(../img/nosotros/spotgreen.jpg)] w-full rounded-lg">
+        <div class="bg-[url('../img/nosotros/hojitas.jpg')] w-full rounded-lg">
           <div class="flex items-center justify-evenly mt-8">
             <div class="flex justify-center items-center gap-4">
-              <h2 class="font-semibold text-4xl text-green-800">Puntos:</h2>
-              <div class="bg-white rounded-lg p-2 border-2 border-green-800">
+              <h2 class="font-semibold text-4xl text-white"  style="text-shadow: 3px 6px 20px black;">Puntos:</h2>
+              <div class="bg-white rounded-lg p-2 border-2 border-green-800 shadow-md">
                 <p class="font-semibold text-2xl text-green-800">1000</p>
               </div>
             </div>
             <div class="flex flex-col gap-3">
-              <h3 class="text-xl text-green-800 p-2 bg-white rounded-xl flex justify-center tracking-[6px] font-bold">FILTROS</h3>
-              <div class="flex gap-10">
-                <div>
-                  <h2>Categorías</h2>
-                  <select name="categorias" id="filtrosCategorias">
-                    <option value="todos">Todos los Productos</option>
-                    <option value="compras">Compras</option>
-                    <option value="entretenimiento">Entretenimiento</option>
-                    <option value="belleza">Belleza</option>
-                    <option value="tecnologia">Tecnología</option>
-                  </select>
-                </div>
-                <div>
-                  <h2>Por Precio</h2>
-                  <select name="precio" id="filtrosPrecio">
-                    <option value="mayor">Mayor precio</option>
-                    <option value="menor">Menor precio</option>
-                  </select>
-                </div>
+              <h3 class="text-xl text-green-800 p-2 bg-white rounded-xl flex justify-center tracking-[6px] font-bold shadow-lg">FILTROS</h3>
+              <div class="flex gap-10" id="contenedorFiltros">
+           
               </div>
             </div>
           </div>

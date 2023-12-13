@@ -1,3 +1,24 @@
+// ! ALERTA DE FORMULARIO
+document
+  .getElementById("formulario")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "¡Tu consulta ha sido enviada!",
+      text: "Nos pondremos en contacto a la brevedad",
+      showConfirmButton: false,
+      timer: 2500,
+      customClass: {
+        content: "color-custom-alerta", // Aplica la clase personalizada al contenido del alert
+      },
+    }).then(() => {
+      // Después de cerrar la alerta, restablece el formulario
+      document.getElementById("formulario").reset();
+    });
+  });
+
 // ! CONTACTO RENDER
 const contacto = [
   {
@@ -10,7 +31,8 @@ const contacto = [
     id: "email",
     img: "../img/contacto/message.png",
     titulo: "Email",
-    descripcion: "mireciclar@gmail.com",
+    descripcion:
+      '<a href="mailto:mireciclar.2023@gmail.com">mireciclar.2023@gmail.com</a>',
   },
   {
     id: "direccion",
