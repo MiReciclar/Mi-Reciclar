@@ -14,7 +14,7 @@ const esfera = document.querySelector(".decoracion");
 usuarios = [];
 
 loginLink.addEventListener("click", (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     registerForm.style.display = "none";
     loginForm.style.display = "flex";
 
@@ -26,10 +26,14 @@ loginLink.addEventListener("click", (e) => {
 
     esfera.classList.remove("esfera-superior-izquierda");
     esfera.classList.add("esfera-inferior-derecha");
+
+    // let img_form = document.querySelector("#img-form");
+
+    // img_form.src = "../img/img-register/familia-reciclando.png"
 });
 
 registerLink.addEventListener("click", (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     loginForm.style.display = "none";
     registerForm.style.display = "flex";
 
@@ -40,8 +44,21 @@ registerLink.addEventListener("click", (e) => {
 
     esfera.classList.remove("esfera-inferior-derecha");
     esfera.classList.add("esfera-superior-izquierda");
+
+    // let img_form = document.querySelector("#img-form");
+
+    // img_form.src = "../img/img-register/reciclar.png"
 });
 
+let mensajes = document.querySelectorAll('.mensaje');
+
+console.log(mensajes);
+
+    mensajes.forEach(function (mensaje) {
+        setTimeout(function () {
+            mensaje.style.display = 'none';
+        }, 5000);
+    });
 
 // function generarId(arrayObjetos) {
 //     let id = 0;
