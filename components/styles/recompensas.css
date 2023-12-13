@@ -1,34 +1,39 @@
 /* Cards */
 .card {
   width: 60%;
+  height: 500px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
   color: #fff;
   margin-bottom: 5rem;
+  border-radius: 10px;
 }
 
 .border {
   position: absolute;
   width: 100%;
   height: 100%;
-  border: 2px solid #070707;
+  border: 2px solid #042900;
   opacity: 0.5;
-  left: -6px;
-  top: -6px;
+  left: -7px;
+  top: -7px;
+  border-radius: 10px;
 }
 
 .card h2 {
   position: relative;
-  padding: 240px 0px 30px 10px;
+  padding: 230px 0px 30px 10px;
   width: 90%;
 }
 
 .card > img {
-  width: 50%;
+  width: 55%;
   position: absolute;
   top: -6%;
   left: -6%;
+  border-radius: 10px;
+  box-shadow: 1px 1px 20px black;
 }
 
 .card-color-0 {
