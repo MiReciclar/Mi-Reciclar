@@ -9,6 +9,8 @@ const registerLink = document.querySelector("#register-form-link");
 const btnIngresa = document.querySelector("#btn-ingresar");
 const btnRegistrate = document.querySelector("#btn-registrar");
 
+const contDetalle = document.querySelector(".contenedor-detalle");
+
 const esfera = document.querySelector(".decoracion");
 
 usuarios = [];
