@@ -118,14 +118,22 @@ const premios = [
 
 const divPremios = document.getElementById("premios");
 
+const toggleOverlay = (event) => {
+  const overlay = event.currentTarget.querySelector(".overlay");
+  if (overlay) {
+    overlay.classList.toggle("hidden");
+  }
+};
+
 const renderPremios = (arrayDePremios) => {
   divPremios.innerHTML = arrayDePremios
     .map((premio) => {
-      return `<div data-categoria=${
-        premio.categoria
-      } class="premios flex shadow-2xl w-full max-w-[600px] h-[300px] rounded-lg p-4 bg-green-100" onmouseover="renderBlurOverlay(${JSON.stringify(
-        premio
-      )})" onmouseout="removeBlurOverlay()">
+      return `<div id=${premio.id} data-categoria=${premio.categoria} class="premios flex shadow-2xl w-full max-w-[600px] h-[300px] rounded-lg p-4 bg-green-100 relative">
+        <div id="overlay-${premio.id}" class="overlay hidden fixed w-full h-full top-0 left-0 bg-opacity-20 bg-white backdrop-filter backdrop-blur-md rounded-md animate-overlayIn z-10 absolute flex justify-center items-center transition-opacity">
+          <div class="w-full h-full flex justify-center items-center">
+            <button class="p-4 bg-green-800 hover:bg-green-700 pointer transition-all text-white text-xl font-bold rounded-lg">Adquirir Premio</button>
+          </div>
+        </div>
         <div
           class="w-48 flex-none bg-cover bg-center bg-no-repeat text-center overflow-hidden rounded-lg"
           style="background-image: url(${premio.img})"
@@ -160,7 +168,16 @@ const renderPremios = (arrayDePremios) => {
       </div>`;
     })
     .join("");
+
+  const allPrices = document.querySelectorAll(".premios");
+
+  allPrices.forEach((price) => {
+    price.addEventListener("mouseenter", toggleOverlay);
+    price.addEventListener("mouseleave", toggleOverlay);
+  });
 };
+
+renderPremios(premios);
 
 renderPremios(premios);
 
@@ -170,8 +187,6 @@ const selectFiltroPrecio = document.getElementById("filtrosPrecio");
 const filtrarYOrdenar = (primerFiltro, segundoFiltro) => {
   const valorCategoria = primerFiltro.value;
   const valorPrecio = segundoFiltro.value;
-
-  console.log(valorCategoria);
 
   let productosFiltrados = premios.filter(
     (premio) =>
@@ -221,23 +236,3 @@ const renderFiltros = () => {
 };
 
 renderFiltros();
-
-const renderBlurOverlay = (premio) => {
-  const overlay = document.createElement("div");
-  overlay.classList.add("overlay");
-
-  overlay.innerHTML = `<div class="overlay-content">
-  <h2>${premio.titulo}</h2>
-  <p>${premio.descripcion}</p>
-  <button class="adquirir-btn">Adquirir</button>
-</div>`;
-
-  divPremios.appendChild(overlay);
-
-  const removeOverlayBlur = () => {
-    const overlay = document.querySelector(".overlay");
-    if (overlay) {
-      overlay.remove;
-    }
-  };
-};
