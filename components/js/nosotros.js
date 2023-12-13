@@ -29,20 +29,6 @@ ScrollReveal().reveal(".reveal-on-scroll-text", {
   viewFactor: 0.3, // Ajusta este valor para controlar cuánto tiene que hacer scroll el usuario antes de que la animación se active completamente
 });
 
-// Inicializa Swiper después de que el DOM esté listo
-// document.addEventListener('DOMContentLoaded', function () {
-//     var swiper = new Swiper('.swiper-container', {
-//       navigation: {
-//         nextEl: '.swiper-button-next',
-//         prevEl: '.swiper-button-prev',
-//       },
-//       pagination: {
-//         el: '.swiper-pagination',
-//         clickable: true,
-//       },
-//     });
-//   });
-
 var swiper = new Swiper(".swiper-container", {
   navigation: {
     nextEl: ".swiper-button-next",
