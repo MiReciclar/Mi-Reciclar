@@ -102,47 +102,52 @@ const Memory = {
 
     buildHTML: function(){
         var frag = '';
-        this.$cards.each(function(k, v){
-            frag += '<div class="card" data-id="'+ v.id +'"><div class="inside">\
-            <div class="front"><img src="'+ v.img +'"\
-            alt="'+ v.name +'" /></div>\
-            <div class="back"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/codepen-logo.png"\
-            alt="Codepen" /></div></div>\
-            </div>';
+        this.$cards.each(function(index, value){
+            frag += `
+            <div class="card" data-id=${value.id}>
+                <div class="inside">
+                    <div class="front">
+                        <img src=${value.img} alt=${value.name} />
+                    </div>
+                    <div class="back">
+                        <img src="../img/logo-reciclar-removebg-preview.png" alt="MiReciclAR" />
+                    </div>
+                </div>
+            </div>`;
         });
         return frag;
     }
 };
 
-var cards = [
+const cards = [
     {
         name: "carton",
-        img: "../img/Eco-Memo/Electronicos.jpg",
+        img: "../img/Eco-Memo/Carton.jpg",
         id: 1,
     },
     {
         name: "metal",
-        img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/css3-logo.png",
+        img: "../img/Eco-Memo/Metal.jpg",
         id: 2
     },
     {
         name: "organic",
-        img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/html5-logo.png",
+        img: "../img/Eco-Memo/Organico.jpg",
         id: 3
     },
     {
         name: "plastic",
-        img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/jquery-logo.png",
+        img: "../img/Eco-Memo/Plastico.jpg",
         id: 4
     }, 
     {
         name: "vidrio",
-        img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/js-logo.png",
+        img: "../img/Eco-Memo/Vidrio.jpg",
         id: 5
     },
     {
-        name: "node",
-        img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/nodejs-logo.png",
+        name: "electronicos",
+        img: "../img/Eco-Memo/Electronicos.jpeg",
         id: 6
     },
 ];
