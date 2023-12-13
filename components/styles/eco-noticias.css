@@ -5,7 +5,15 @@
     box-sizing: border-box;
 
 }
-
+body{
+    padding-top: 84px;
+}
+nav, .bg-green-600{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9999;
+}
 /* -------------MOBILE FIRST ------------- */
 /* --------------- CARD CONTAINER -------------------- */
 .container-news {
@@ -52,7 +60,7 @@
 }
 
 .card-text-title {
-    background-color: #66A329;
+    background-color: #16a34a;
     border-radius: .3rem;
     color: #fff;
     font-size: 1.3rem;

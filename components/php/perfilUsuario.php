@@ -19,6 +19,7 @@
     $apellido = $datos_usuario['apellido'];
     $usuario = $datos_usuario['usuario'];
     $img_perfil = $datos_usuario['img_perfil'];
+    $puntos = $datos_usuario['puntos'];
   }
 
 ?>
@@ -31,6 +32,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../styles/nav-foot.css" />
     <link rel="stylesheet" href="../styles/perfil.css">
+    <link rel="shortcut icon" href="../img/logo-reciclar-removebg-preview.png" type="image/x-icon"/>
 
     <title>Perfil</title>
 </head>
@@ -188,6 +190,7 @@
       </nav>
     <div class="perfil-cont">
         <div class="perfil-datos-cont">
+          <a href="../php/cerrar_sesion.php">Salir</a>
             <div class="foto-perfil-cont">
               <?php
                 echo "<img class='foto-perfil' src='$img_perfil' alt='foto de perfil del usuario'>";
@@ -206,7 +209,7 @@
 
                 <div class="puntos-cont contenido-cont">
                     <h3>Puntos</h3>
-                    <div class="puntos-usuario">1000</div>
+                    <div class="puntos-usuario"><?php echo $puntos ?></div>
                 </div>
             </div>
         </div>
@@ -242,6 +245,8 @@
 
               if($resultado){
                 echo '<div class = "mensaje mensaje-exito">Actualización exitosa</div>';
+                sleep(5);
+                header("location:../php/perfilUsuario.php");
               }else{
                 echo '<div class = "mensaje mensaje-error">Error al actualizar</div>';
               }
