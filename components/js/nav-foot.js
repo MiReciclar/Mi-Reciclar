@@ -24,12 +24,16 @@ hamburguer.addEventListener("click", handleHamburguer);
 
 // ! NAVBAR RENDER
 const navigationItems = [
-  { id: "inicio", label: "Inicio", nav: "inicio" },
-  { id: "nuestraMision", label: "Nuestra Misión", nav: "/nuestraMision" },
+  { id: "inicio", label: "Inicio", nav: "/index.html" },
+  {
+    id: "nuestraMision",
+    label: "Nuestra Misión",
+    nav: "../htmls/nosotros.html",
+  },
   { id: "rencompensa", label: "Rencompensas", nav: "rencompensa" },
-  { id: "jornadas", label: "Jornadas", nav: "jornadas" },
+  { id: "jornadas", label: "Jornadas", nav: "../htmls/voluntariados.html" },
   { id: "ecoNoticias", label: "Eco noticias", nav: "ecoNoticias" },
-  { id: "contacto", label: "Contacto", nav: "contacto" },
+  { id: "contacto", label: "Contacto", nav: "../htmls/contacto.html" },
 ];
 
 const renderNavigationItems = () => {
@@ -37,10 +41,10 @@ const renderNavigationItems = () => {
   navContainer.innerHTML = navigationItems
     .map((item) => {
       return `<a
-      href=${item.nav}
-      class="text-white hover:bg-green-800 rounded-md px-3 py-2 lg:text-lg font-medium text-sm"
-      >${item.label}</a
-    >`;
+    href=${item.nav}
+    class="text-white hover:bg-green-800 rounded-md px-3 py-2 lg:text-lg font-medium text-sm"
+    >${item.label}</a
+  >`;
     })
     .join("");
 };
@@ -54,10 +58,10 @@ const renderNavigationItemsMobile = () => {
     .map((item) => {
       console.log(item);
       return `<a
-      href=${item.nav}
-      class="text-white hover:bg-green-800 rounded-md px-3 py-2 lg:text-lg font-medium text-sm"
-      >${item.label}</a
-    >`;
+    href=${item.nav}
+    class="text-white hover:bg-green-800 rounded-md px-3 py-2 lg:text-lg font-medium text-sm"
+    >${item.label}</a
+  >`;
     })
     .join("");
 };

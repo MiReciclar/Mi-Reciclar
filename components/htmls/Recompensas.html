@@ -46,33 +46,7 @@
               />
             </div>
             <div class="hidden sm:ml-6 sm:block">
-              <div class="flex space-x-3">
-                <a
-                  href="../htmls/nosotros.html"
-                  class="text-white hover:bg-green-800 rounded-md px-3 py-2 lg:text-lg font-medium text-sm"
-                  >Nuestra Misión</a
-                >
-                <a
-                  href="#"
-                  class="text-white hover:bg-green-800 rounded-md px-3 py-2 lg:text-lg font-medium text-sm"
-                  >Recompensas</a
-                >
-                <a
-                  href="../htmls/voluntariados.html"
-                  class="text-white hover:bg-green-800 rounded-md px-3 py-2 lg:text-lg font-medium text-sm"
-                  >Jornadas</a
-                >
-                <a
-                  href="#"
-                  class="text-white hover:bg-green-800 rounded-md px-3 py-2 lg:text-lg font-medium text-sm"
-                  >Eco Noticias</a
-                >
-                <a
-                  href="#"
-                  class="text-white hover:bg-green-800 rounded-md px-3 py-2 lg:text-lg font-medium text-sm"
-                  >Contacto</a
-                >
-              </div>
+              <div id="navContainer" class="flex space-x-3"></div>
             </div>
           </div>
 
@@ -127,7 +101,7 @@
                   class="block px-4 py-2 text-lg text-green-800"
                   role="menuitem"
                   tabindex="-1"
-                  id="user-menu-item-1"
+                  id="user-menu-item-2"
                   >Eco Memo</a
                 >
               </div>
@@ -137,77 +111,19 @@
       </div>
 
       <!-- Menu mobile -->
-      <div class="md:hidden hidden" id="mobile-menu">
-        <div class="space-y-1 px-2 pb-3 pt-2">
-          <a
-            href="#"
-            class="text-white hover:bg-green-800 block rounded-md px-3 py-2 text-base font-medium"
-            >Nuestra Misión</a
-          >
-          <a
-            href="#"
-            class="text-white hover:bg-green-800 block rounded-md px-3 py-2 text-base font-medium"
-            >Recompensas</a
-          >
-          <a
-            href="#"
-            class="text-white hover:bg-green-800 block rounded-md px-3 py-2 text-base font-medium"
-            >Jornadas</a
-          >
-          <a
-            href="#"
-            class="text-white hover:bg-green-800 block rounded-md px-3 py-2 text-base font-medium"
-            >Eco Noticias</a
-          >
-          <a
-            href="#"
-            class="text-white hover:bg-green-800 block rounded-md px-3 py-2 text-base font-medium"
-            >Contacto</a
-          >
-        </div>
-      </div>
+      <div class="md:hidden hidden flex flex-columns" id="mobile-menu"></div>
     </nav>
-    <main>
-      <section class="banner">
-        <p>Gracias por cultivar el planeta</p>
-      </section>
-      <section class="container-principal">
-        <article class="first-row">
-          <div class="container-text card-w">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-              culpa maxime voluptatu dfdwrge rgergg dgrg
-            </p>
-          </div>
-          <div class="container-img card-w">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d210146.75955271677!2d-58.5981081473618!3d-34.61571293339003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20CABA!5e0!3m2!1ses-419!2sar!4v1698012999677!5m2!1ses-419!2sar"
-              frameborder="0"
-              class="iframe"
-            ></iframe>
-          </div>
-        </article>
-        <article class="second-row">
-          <div class="cointainer-img card-w">
-            <img src="../img/Eco-Memo/Metal.jpg" alt="" class="imgQR" />
-          </div>
-          <div class="container-text card-w">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-              culpa maxime voluptatu dfdwrge rgergg dgrg
-            </p>
-          </div>
-        </article>
-      </section>
-
-      <section class="flex justify-center items-center">
-        <div class="w-[90%] bg-green-300">
+      <section class="flex justify-center items-center w-full p-10">
+        <div class="bg-[url(../img/nosotros/spotgreen.jpg)] w-full rounded-lg">
           <div class="flex items-center justify-evenly mt-8">
-            <div>
+            <div class="flex justify-center items-center gap-4">
               <h2 class="font-semibold text-4xl text-green-800">Puntos:</h2>
+              <div class="bg-white rounded-lg p-2 border-2 border-green-800">
+                <p class="font-semibold text-2xl text-green-800">1000</p>
+              </div>
             </div>
-            <div>
-              <h3>FILTROS</h3>
+            <div class="flex flex-col gap-3">
+              <h3 class="text-xl text-green-800 p-2 bg-white rounded-xl flex justify-center tracking-[6px] font-bold">FILTROS</h3>
               <div class="flex gap-10">
                 <div>
                   <h2>Categorías</h2>
