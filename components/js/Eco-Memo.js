@@ -23,7 +23,7 @@ const Memory = {
     setup: function(){
         this.html = this.buildHTML();
         this.$game.html(this.html);
-        this.$memoryCards = $(".card");
+        this.$memoryCards = $(".card-memo");
         this.paused = false;
     this.guess = null;
         this.binding();
@@ -52,7 +52,7 @@ const Memory = {
                     Memory.paused = false;
                 }, 600);
             }
-            if($(".matched").length == $(".card").length){
+            if($(".matched").length == $(".card-memo").length){
                 _.win();
             }
         }
@@ -104,7 +104,7 @@ const Memory = {
         var frag = '';
         this.$cards.each(function(index, value){
             frag += `
-            <div class="card" data-id=${value.id}>
+            <div class="card-memo" data-id=${value.id}>
                 <div class="inside">
                     <div class="front">
                         <img src=${value.img} alt=${value.name} />
