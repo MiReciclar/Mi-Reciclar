@@ -1,27 +1,3 @@
-// HTML Elements
-const smiley = document.getElementById("user-menu-button");
-const userMenu = document.getElementById("user-menu");
-const hamburguerMenu = document.getElementById("mobile-menu");
-const hamburguer = document.getElementById("hamburger");
-const hamburgerBars = document.querySelectorAll("#hamburger .bar");
-
-console.log(hamburgerBars);
-// Methods
-const handleModal = () => {
-  userMenu.classList.toggle("opacity-100");
-  userMenu.classList.toggle("scale-100");
-  userMenu.classList.toggle("opacity-0");
-  userMenu.classList.toggle("scale-95");
-};
-smiley.addEventListener("click", handleModal);
-
-const handleHamburguer = () => {
-  hamburguerMenu.classList.toggle("hidden");
-  hamburguerMenu.classList.toggle("md:hidden");
-  hamburguerMenu.classList.toggle("custom-modal");
-};
-hamburguer.addEventListener("click", handleHamburguer);
-
 //Animaciones de scroll en las imagenes
 ScrollReveal().reveal(".reveal-on-scroll", {
   duration: 1000,
@@ -76,12 +52,16 @@ var swiper = new Swiper(".swiper-container", {
 
 // ! NAVBAR RENDER
 const navigationItems = [
-  { id: "inicio", label: "Inicio", nav: "inicio" },
-  { id: "nuestraMision", label: "Nuestra Misión", nav: "/nuestraMision" },
+  { id: "inicio", label: "Inicio", nav: "/index.html" },
+  {
+    id: "nuestraMision",
+    label: "Nuestra Misión",
+    nav: "../htmls/nosotros.html",
+  },
   { id: "rencompensa", label: "Rencompensas", nav: "rencompensa" },
-  { id: "jornadas", label: "Jornadas", nav: "jornadas" },
+  { id: "jornadas", label: "Jornadas", nav: "../htmls/voluntariados.html" },
   { id: "ecoNoticias", label: "Eco noticias", nav: "ecoNoticias" },
-  { id: "contacto", label: "Contacto", nav: "contacto" },
+  { id: "contacto", label: "Contacto", nav: "../htmls/contacto.html" },
 ];
 
 const renderNavigationItems = () => {
