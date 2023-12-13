@@ -3,7 +3,7 @@
 const premios = [
   {
     id: 1,
-    img: "",
+    img: "../img/recompensas/cine.jpg",
     categoria: "entretenimiento",
     puntos: 300,
     titulo: "2 x 1 en Cines 3D!!",
@@ -12,7 +12,7 @@ const premios = [
   },
   {
     id: 2,
-    img: "",
+    img: "../img/recompensas/kiosko.jpg",
     categoria: "compras",
     puntos: 1000,
     titulo: "Orden de compra $5000 en Kioskos y comercios adheridos",
@@ -21,7 +21,7 @@ const premios = [
   },
   {
     id: 3,
-    img: "",
+    img: "../img/recompensas/spa.jpg",
     categoria: "belleza",
     puntos: 3800,
     titulo: "Día de Spa para dos personas",
@@ -30,7 +30,7 @@ const premios = [
   },
   {
     id: 4,
-    img: "",
+    img: "../img/recompensas/teatro.jpg",
     categoria: "entretenimiento",
     puntos: 2000,
     titulo: "Disfrutá del teatro en famiia",
@@ -39,7 +39,7 @@ const premios = [
   },
   {
     id: 5,
-    img: "",
+    img: "../img/recompensas/supermercado.jpg",
     categoria: "compras",
     puntos: 3000,
     titulo: "Orden de compra $15.000 en Hipermercados",
@@ -48,7 +48,7 @@ const premios = [
   },
   {
     id: 6,
-    img: "",
+    img: "../img/recompensas/petshop.jpg",
     categoria: "compras",
     puntos: 4500,
     titulo:
@@ -58,7 +58,7 @@ const premios = [
   },
   {
     id: 7,
-    img: "",
+    img: "../img/recompensas/peeling.jpg",
     categoria: "belleza",
     puntos: 2000,
     titulo: "Limpieza Facial + Peeling con ác. glicólico",
@@ -67,7 +67,7 @@ const premios = [
   },
   {
     id: 8,
-    img: "",
+    img: "../img/recompensas/estancia.jpg",
     categoria: "entretenimiento",
     puntos: 3500,
     titulo: "Día de campo en Familia",
@@ -76,7 +76,7 @@ const premios = [
   },
   {
     id: 9,
-    img: "",
+    img: "../img/recompensas/smart.jpg",
     categoria: "tecnologia",
     puntos: 30000,
     titulo: "Smart TV 55'",
@@ -85,7 +85,7 @@ const premios = [
   },
   {
     id: 10,
-    img: "",
+    img: "../img/recompensas/playstation.jpg",
     categoria: "tecnologia",
     puntos: 40000,
     titulo: "Play Station 5",
@@ -102,7 +102,7 @@ const renderPremios = (arrayDePremios) => {
       return `<div data-categoria=${premio.categoria} class="premios flex shadow-2xl w-[650px] h-[220px] rounded-lg border-green-600 border-2">
         <div
           class="w-48 flex-none bg-cover bg-center bg-no-repeat rounded-t text-center overflow-hidden"
-          style="background-image: url('../img/nosotros/bolsa-celu.jpg')"
+          style="background-image: url(${premio.img})"
           title=""
         ></div>
         <div
