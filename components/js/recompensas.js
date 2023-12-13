@@ -1,4 +1,24 @@
 // ! PREMIOS RENDER
+const filters = [
+  {
+    id: "categorias",
+    title: "Categorías",
+    nombre: "categorias",
+    oppciones: [
+      "Todos los productos",
+      "Compras",
+      "Entretenimiento",
+      "Belleza",
+      "Tecnología",
+    ],
+  },
+  {
+    id: "precio",
+    title: "Por precio",
+    nombre: "precio",
+    oppciones: ["Menor precio", "Menor precio"],
+  },
+];
 
 const premios = [
   {
