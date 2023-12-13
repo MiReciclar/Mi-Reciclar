@@ -50,52 +50,6 @@ var swiper = new Swiper(".swiper-container", {
   },
 });
 
-// ! NAVBAR RENDER
-const navigationItems = [
-  { id: "inicio", label: "Inicio", nav: "/index.html" },
-  {
-    id: "nuestraMision",
-    label: "Nuestra Misión",
-    nav: "../htmls/nosotros.html",
-  },
-  { id: "rencompensa", label: "Rencompensas", nav: "rencompensa" },
-  { id: "jornadas", label: "Jornadas", nav: "../htmls/voluntariados.html" },
-  { id: "ecoNoticias", label: "Eco noticias", nav: "ecoNoticias" },
-  { id: "contacto", label: "Contacto", nav: "../htmls/contacto.html" },
-];
-
-const renderNavigationItems = () => {
-  const navContainer = document.getElementById("navContainer");
-  navContainer.innerHTML = navigationItems
-    .map((item) => {
-      return `<a
-    href=${item.nav}
-    class="text-white hover:bg-green-800 rounded-md px-3 py-2 lg:text-lg font-medium text-sm"
-    >${item.label}</a
-  >`;
-    })
-    .join("");
-};
-
-renderNavigationItems();
-
-const renderNavigationItemsMobile = () => {
-  const navContainerMobile = document.getElementById("mobile-menu");
-  console.log(navContainerMobile);
-  navContainerMobile.innerHTML = navigationItems
-    .map((item) => {
-      console.log(item);
-      return `<a
-    href=${item.nav}
-    class="text-white hover:bg-green-800 rounded-md px-3 py-2 lg:text-lg font-medium text-sm"
-    >${item.label}</a
-  >`;
-    })
-    .join("");
-};
-
-renderNavigationItemsMobile();
-
 // ! NUESTROS VALORES RENDER
 const valores = [
   {
