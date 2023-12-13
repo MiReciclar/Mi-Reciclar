@@ -1,29 +1,53 @@
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /*  backdrop-filter: blur(10px); /*  z-index: 2; /*}
-
-.overlay-content {
-  text-align: center;
-  color: white;
+/* Cards */
+.card {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  color: #fff;
+  margin-bottom: 5rem;
 }
 
-.adquirir-btn {
-  background-color: #4caf50; /* Color de fondo del botón */
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.border {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #070707;
+  opacity: 0.5;
+  left: -6px;
+  top: -6px;
+}
+
+.card h2 {
+  position: relative;
+  padding: 240px 0px 30px 10px;
+  width: 90%;
+}
+
+.card > img {
+  width: 50%;
+  position: absolute;
+  top: -6%;
+  left: -6%;
+}
+
+.card-color-0 {
+  background-color: #3a722e;
+}
+
+.card-color-1 {
+  background-color: #8bd47e;
+}
+
+.overlay {
+  animation: overlayIn 0.2s ease-in;
+}
+
+@keyframes overlayIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
