@@ -1,4 +1,9 @@
 // ! PREMIOS RENDER
+let points = 1000;
+
+const pointsElement = document.getElementById("points");
+pointsElement.innerHTML = points;
+
 const filters = [
   {
     id: "categorias",
@@ -118,6 +123,10 @@ const premios = [
 
 const divPremios = document.getElementById("premios");
 
+const adquirirPremios = (id) => {
+  console.log(id);
+};
+
 const toggleOverlay = (event) => {
   const overlay = event.currentTarget.querySelector(".overlay");
   if (overlay) {
@@ -129,9 +138,9 @@ const renderPremios = (arrayDePremios) => {
   divPremios.innerHTML = arrayDePremios
     .map((premio) => {
       return `<div id=${premio.id} data-categoria=${premio.categoria} class="premios flex shadow-2xl w-full max-w-[600px] h-[300px] rounded-lg p-4 bg-green-100 relative">
-        <div id="overlay-${premio.id}" class="overlay hidden fixed w-full h-full top-0 left-0 bg-opacity-20 bg-white backdrop-filter backdrop-blur-md rounded-md animate-overlayIn z-10 absolute flex justify-center items-center transition-opacity">
+        <div id="overlay-${premio.id}" class="overlay hidden fixed w-full h-full top-0 left-0 bg-opacity-10 bg-white backdrop-filter backdrop-blur-md rounded-md animate-overlayIn z-10 absolute flex justify-center items-center transition-opacity">
           <div class="w-full h-full flex justify-center items-center">
-            <button class="p-4 bg-green-800 hover:bg-green-700 pointer transition-all text-white text-xl font-bold rounded-lg">Adquirir Premio</button>
+            <button id="${premio.id}" class="addButton p-4 bg-green-800 hover:bg-green-700 pointer transition-all text-white text-xl font-bold rounded-lg">Adquirir Premio</button>
           </div>
         </div>
         <div
@@ -170,10 +179,17 @@ const renderPremios = (arrayDePremios) => {
     .join("");
 
   const allPrices = document.querySelectorAll(".premios");
+  const addButtons = document.querySelectorAll(".addButton");
 
   allPrices.forEach((price) => {
     price.addEventListener("mouseenter", toggleOverlay);
     price.addEventListener("mouseleave", toggleOverlay);
+  });
+
+  addButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      adquirirPremios(button.id);
+    });
   });
 };
 
