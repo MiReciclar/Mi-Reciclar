@@ -7,18 +7,16 @@
 
 .main{
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-
     position: relative;
     overflow: hidden;
 }
 
 .cont-form{
     width: 40%;
-    /* border: 1px solid #ddd; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,7 +25,6 @@
 .cont-detalle{
     width: 60%;
     height: 100%;
-    /* border: 1px solid #ddd; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,13 +87,6 @@
     display: none;
 }
 
-/* #register-form .btn-form{
-
-}
-
-#register-form .btn-form:hover{
-} */
-
 .cont-img-detalle {
     width: 100%;
     min-height: 100%;
@@ -114,32 +104,51 @@
     opacity: 0;
     position: absolute;
     z-index: -9999;
-    transition: opacity 1s ease; /* Agrega esta línea */
+    transition: opacity 1s ease;
 }
 
 .esfera-superior-izquierda{
-    /* top: -125%;
-    left: -70%;
-    opacity: 1;
-    /* transform: translate(-50%, -50%); */
-    /* transition: top 1s ease, left 1s ease, opacity 1s ease;  */
     z-index: -9999;
-    animation: esfera-izquierda 1s ease forwards; /* Agrega esta línea */
+    animation: esfera-izquierda 1s ease forwards;
 }
 
 .esfera-inferior-derecha{
-    /* bottom: -125%;
-    right: -70%;
-    opacity: 1; */
-    /* transform: translate(50%, 50%); */
-    /* transition: bottom 1s ease, right 1s ease, opacity 1s ease; */
     z-index: -9999;
-    animation: esfera-deracha 1s ease forwards; /* Agrega esta línea */
+    animation: esfera-deracha 1s ease forwards;
 }
 
 .difuminado{
     animation: difuminado 1s ease forwards;
 }
+
+.mensaje-exito{
+    padding: 20px;
+    position: absolute;
+    z-index: 999;
+    bottom: 5%;
+    right: 5%;
+    margin: auto;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    background-color: rgba(5, 181, 5, 0.438);
+    border-radius: 5px;
+}
+
+.mensaje-error{
+    padding: 20px;
+    position: absolute;
+    z-index: 999;
+    bottom: 5%;
+    right: 5%;
+    margin: auto;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgba(223, 24, 24, 0.596);
+}
+
 
 @keyframes esfera-izquierda{
     from{
@@ -189,4 +198,22 @@
         opacity: 1;
         transition: opacity 1s ease;
     }
+}
+
+
+@media screen and (max-width: 425px){
+
+    .cont-detalle{
+        display: none;
+    }
+
+    .cont-form{
+        width: 90%;
+    }
+
+    .decoracion{
+        width: 1500px;
+        height: 1500px;
+    }
+
 }
