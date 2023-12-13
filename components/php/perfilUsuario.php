@@ -18,6 +18,7 @@
     $nombre = $datos_usuario['nombre'];
     $apellido = $datos_usuario['apellido'];
     $usuario = $datos_usuario['usuario'];
+    $img_perfil = $datos_usuario['img_perfil'];
   }
 
 ?>
@@ -188,7 +189,10 @@
     <div class="perfil-cont">
         <div class="perfil-datos-cont">
             <div class="foto-perfil-cont">
-                <img class="foto-perfil" src="../img/img-perfil/sin foto 2.png" alt="foto de perfil del usuario">
+              <?php
+                echo "<img class='foto-perfil' src='$img_perfil' alt='foto de perfil del usuario'>";
+              ?>
+                <!-- <img class="foto-perfil" src="../img/img-perfil/sin foto 2.png" alt="foto de perfil del usuario"> -->
                 <div class="btn-modificar modif-img-perfil"></div>
             </div>
 
@@ -214,6 +218,81 @@
                 <div class="ampliartxt">Ampliar</div>
             </div>
         </div>
+
+        <div class = "cont-form-edit-usuario">
+          <form action="#" method = "POST" class = "form-edit-usuario">
+            <h3>Cambiar nombre de Usuario</h3>
+            <input type="text" name = "edit-usuario" id = "edit-usuario" placeholder = "Nuevo nombre usuario"><br>
+            <div class = "cont-btn-form-edit-usuario">
+              <button type="submit" name="actualizar_usuario" id = "aceptar" >Aceptar</button>
+              <button name="cancelar" id = "cancelar" >Cancelar</button>
+            </div>
+          </form>
+        </div>
+        <?php
+        
+          if(isset($_POST['actualizar_usuario'])){
+            $usuario_nuevo = $_POST['edit-usuario'];
+
+            if(!empty($usuario_nuevo)){
+              echo $usuario_nuevo;
+              
+              $consulta = "UPDATE usuario SET usuario = '$usuario_nuevo' WHERE id = '$id'";
+              $resultado = mysqli_query($conectar, $consulta);
+
+              if($resultado){
+                echo '<div class = "mensaje mensaje-exito">Actualización exitosa</div>';
+              }else{
+                echo '<div class = "mensaje mensaje-error">Error al actualizar</div>';
+              }
+
+            }else{
+              echo '<div class = "mensaje mensaje-error">El campo no puede estar vacio</div>';
+            }
+          }
+
+        ?>
+
+        <div class = "cont-form-img-usuario">
+          <form action="#" method = "POST" enctype="multipart/form-data" class = "form-edit-usuario">
+            <h3>Añadir imagen de perfil</h3>
+            <input type="file" name = "img" id = "img"><br>
+            <div class = "cont-btn-form-edit-usuario">
+              <button type="submit" name="enviar_img" id = "aceptar">Aceptar</button>
+              <button type="submit" name="cancelar" id = "cancelar">Cancelar</button>
+            </div>
+          </form>
+        </div>
+
+        <?php
+          if(isset($_POST['enviar_img'])){
+            $carpeta_destino  = "../img/img-perfil/";
+
+            $nombre_imagen = $_FILES['img']['name'];
+
+            $extension = pathinfo($nombre_imagen, PATHINFO_EXTENSION);
+
+            if($extension == "jpg" || $extension == "png" || $extension == "jpeg") {
+
+              $ruta_temporal = $_FILES['img']['tmp_name'];
+              $ruta_destino = $carpeta_destino . $nombre_imagen;
+              move_uploaded_file($ruta_temporal, $ruta_destino);
+
+              $consulta = "UPDATE usuario SET img_perfil = '$ruta_destino' WHERE id = '$id'";
+              $resultado = mysqli_query($conectar, $consulta);
+
+              if($resultado){
+                echo '<div class = "mensaje mensaje-exito">Actualización exitosa</div>';
+              }else{
+                echo '<div class = "mensaje mensaje-error">Error al actualizar</div>';
+              }
+            }
+            else{
+                echo '<div class = "mensaje mensaje-error">Tipo de imagen no permitida</div>';
+            }
+          }
+        ?>
+
     </div>
     <footer class="py-6 bg-green-800 dark:text-gray-50">
         <div
@@ -393,5 +472,6 @@
         </div>
       </footer>
     <script src="../js/nav-foot.js"></script>
+    <script src="../js/perfil-usuario.js"></script>
 </body>
 </html>
