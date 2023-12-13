@@ -30,9 +30,13 @@ const navigationItems = [
     label: "Nuestra Misión",
     nav: "../htmls/nosotros.html",
   },
-  { id: "rencompensa", label: "Rencompensas", nav: "rencompensa" },
+  { id: "recompensa", label: "Recompensas", nav: "../htmls/Recompensas.html" },
   { id: "jornadas", label: "Jornadas", nav: "../htmls/voluntariados.html" },
-  { id: "ecoNoticias", label: "Eco noticias", nav: "ecoNoticias" },
+  {
+    id: "ecoNoticias",
+    label: "Eco noticias",
+    nav: "../htmls/Eco-Noticias.html",
+  },
   { id: "contacto", label: "Contacto", nav: "../htmls/contacto.html" },
 ];
 
