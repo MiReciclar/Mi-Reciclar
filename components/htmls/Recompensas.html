@@ -123,13 +123,11 @@
         <div class="w-[90%] mx-auto flex items-center gap-10 justify-center">
           <div class="card card-color-0">
             <div class="border"></div>
-            <img
-              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-00.jpg"
-            />
+            <img class="imagen-1" src="../img/recompensas/reciclaje.jpg" />
             <h2 class="text-4xl text-center">
               ¡Acercate a dejar tus reciclables!
             </h2>
-            <p class="text-center text-lg p-4 mb-10">
+            <p class="text-center text-lg p-4">
               En Mi ReciclAR contamos con diversos Ecopuntos de recolección
               estratégicamente ubicados para facilitar y fomentar nuestro
               compromiso con el reciclaje. Dirigite al punto más cercano e
@@ -137,30 +135,34 @@
               cambio y ayudanos a construir un mundo mejor!
             </p>
           </div>
-          <div class="">
-            <img src="../img/recompensas/mapa.gif" alt="" />
+          <div class="w-[60%] items-center justify-center flex">
+            <img
+              class="mb-[60px] h-[50%] rounded-lg"
+              src="../img/recompensas/mapa.gif"
+              alt=""
+            />
           </div>
         </div>
 
         <div class="w-[90%] mx-auto flex items-center gap-10 justify-center">
-          <div class="card card-color-0">
-            <div class="border"></div>
+          <div class="w-[60%] items-center justify-center flex">
             <img
-              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-00.jpg"
+              src="../img/recompensas/dispositivos-removebg-preview.png"
+              alt=""
             />
-            <h2 class="text-4xl text-center">
-              ¡Acercate a dejar tus reciclables!
-            </h2>
-            <p class="text-center text-lg p-4 mb-10">
-              En Mi ReciclAR contamos con diversos Ecopuntos de recolección
-              estratégicamente ubicados para facilitar y fomentar nuestro
-              compromiso con el reciclaje. Dirigite al punto más cercano e
-              intercambiá tus reciclables por premios! <br />¡Se parte del
-              cambio y ayudanos a construir un mundo mejor!
-            </p>
           </div>
-          <div class="">
-            <img src="../img/recompensas/mapa.gif" alt="" />
+          <div class="card card-color-1">
+            <div class="border"></div>
+            <img class="imagen-2" src="../img/recompensas/escan.jpg" />
+            <h2 class="text-4xl text-center">
+              ¡Escaneá el código QR y ganá premios!
+            </h2>
+            <p class="text-center text-lg p-4">
+              Una vez despositados tus reciclables en cualquiera de nuestros
+              Ecopuntos, escaneá con tu celu el código QR del cesto e
+              inmediatamente podrás ver el impacto de los puntos adquiridos en
+              tu aplicación Mi ReciclAR!
+            </p>
           </div>
         </div>
       </section>
@@ -178,7 +180,10 @@
               <div
                 class="bg-white rounded-lg p-2 border-2 border-green-800 shadow-md"
               >
-                <p class="font-semibold text-2xl text-green-800">1000</p>
+                <p
+                  id="points"
+                  class="font-semibold text-2xl text-green-800"
+                ></p>
               </div>
             </div>
             <div class="flex flex-col gap-3">
@@ -269,7 +274,8 @@
               <li>
                 <a
                   rel="noopener noreferrer"
-                  href="#"
+                  href="https://www.linkedin.com/in/mlabarrere/"
+                  target="_blank"
                   class="hover:text-green-500"
                   >Mailen Alvarez</a
                 >
@@ -277,7 +283,8 @@
               <li>
                 <a
                   rel="noopener noreferrer"
-                  href="#"
+                  href="https://www.linkedin.com/in/ambrosino-giuliana"
+                  target="_blank"
                   class="hover:text-green-500"
                   >Giuliana Ambrosino</a
                 >
@@ -285,7 +292,8 @@
               <li>
                 <a
                   rel="noopener noreferrer"
-                  href="#"
+                  href="https://www.linkedin.com/in/camila-ortubey/"
+                  target="_blank"
                   class="hover:text-green-500"
                   >Camila Ortubey</a
                 >
@@ -293,7 +301,8 @@
               <li>
                 <a
                   rel="noopener noreferrer"
-                  href="#"
+                  href="https://www.linkedin.com/in/santiago-agustin-flores/"
+                  target="_blank"
                   class="hover:text-green-500"
                   >Santiago Flores</a
                 >
@@ -301,7 +310,8 @@
               <li>
                 <a
                   rel="noopener noreferrer"
-                  href="#"
+                  href="https://www.linkedin.com/in/gaonacorreaemanuel"
+                  target="_blank"
                   class="hover:text-green-500"
                   >Emanuel Gaona</a
                 >
@@ -320,7 +330,7 @@
               rel="noopener noreferrer"
               href="#"
               title="Email"
-              class="flex items-center justify-center w-10 h-10 rounded-full bg-green-600"
+              class="flex items-center justify-center w-10 h-10 rounded-full bg-green-600 hover:bg-green-900"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -340,7 +350,7 @@
               rel="noopener noreferrer"
               href="#"
               title="Twitter"
-              class="flex items-center justify-center w-10 h-10 rounded-full bg-green-600"
+              class="flex items-center justify-center w-10 h-10 rounded-full bg-green-600 hover:bg-green-900"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -357,7 +367,7 @@
               rel="noopener noreferrer"
               href="#"
               title="GitHub"
-              class="flex items-center justify-center w-10 h-10 rounded-full bg-green-600"
+              class="flex items-center justify-center w-10 h-10 rounded-full bg-green-600 hover:bg-green-900"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
