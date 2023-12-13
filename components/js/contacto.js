@@ -16,19 +16,18 @@ document
       },
     });
 
-    async function main() {
+    () => {
       // send mail with defined transport object
-      const info = await transporter.sendMail({
+        transporter.sendMail({
         from: '"Fred Foo 👻" <mireciclar.2023@gmail.com>', // sender address
         to: "mireciclar.2023@gmail.com", // list of receivers
         subject: "", // Subject line
         text: `${formBody}`, // plain text body
-        html: "<b>Hello world?</b>", // html body
+        //html: "<b>Hello world?</b>", // html body
 
       });
       console.log("Message sent: %s", info.messageId);
     }
-    main().catch(console.error);
     //----------------------------------------
     console.log('hola');
     event.preventDefault();
