@@ -1,3 +1,11 @@
+.points_section {
+  background-color: #16a34a;
+  border-radius: .5rem;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+
 .wrap {
   position: relative;
   height: 100vh;
@@ -11,24 +19,10 @@
   perspective: 500px;
   min-height: 100vh;
   height: 100vh;
-  background-color: crimson;
   position: relative;
 }
 
-@media (max-width: 800px) {
-  .card {
-    width: 25%;
-    height: 16.666%;
-  }
-  .front, .back {
-    padding: 5px;
-  }
-  .back {
-    padding: 10px;
-  }
-}
-
-.card {
+.card-memo {
   float: left;
   width: 25%;
   height: 30%;
@@ -48,16 +42,17 @@
   display: block;
   transform-style: preserve-3d;
   transition: 0.4s ease-in-out;
-  background-color: #F2BD1D;
-  border-radius: .3rem; 
+  /* background-color: #F2BD1D; */
+  background-color: #bcffcc;
+  border-radius: .3rem;
 }
 
-.card .inside.picked,
-.card .inside.matched {
+.card-memo .inside.picked,
+.card-memo .inside.matched {
   transform: rotateY(180deg);
 }
 
-.card .inside.matched {
+.card-memo .inside.matched {
   animation: matchAnim 1s ease-in-out;
   animation-delay: 0.4s;
 }
@@ -66,12 +61,14 @@
   0% {
     background: #bcffcc;
   }
+
   100% {
     background: white;
   }
 }
 
-.card .front, .card .back {
+.card-memo .front,
+.card-memo .back {
   backface-visibility: hidden;
   position: absolute;
   top: 0;
@@ -83,7 +80,8 @@
   border-radius: .5rem;
 }
 
-.card .front img, .card .back img {
+.card-memo .front img,
+.card-memo .back img {
   max-width: 100%;
   display: block;
   margin: 0 auto;
@@ -91,16 +89,16 @@
   height: 100%;
 }
 
-.card .front {
+.card-memo .front {
   transform: rotateY(-180deg);
 }
 
-.card .back {
-  transform: rotateX(0); /* Fix Firefox backface-visibility */
+.card-memo .back {
+  transform: rotateX(0);
+  /* Fix Firefox backface-visibility */
 }
 
 .modal-overlay {
-  display: none;
   background: rgba(0, 0, 0, 0.8);
   position: fixed;
   top: 0;
@@ -110,7 +108,6 @@
 }
 
 .modal {
-  display: none;
   position: relative;
   width: 500px;
   height: 400px;
@@ -118,32 +115,109 @@
   max-width: 90vw;
   min-height: 380px;
   margin: 0 auto;
-  background: white;
+  background: #bcffcc;
   top: 50%;
   transform: translateY(-50%);
   padding: 30px 10px;
+  text-align: center;
+  border-radius: .5rem;
+}
+
+
+.winner {}
+
+.restart {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  border-radius: .5rem;
+  padding: .3rem;
+  min-width: 4rem;
 }
 
 .modal .winner {
-  font-size: 80px;
+  font-size: 5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
+  color: #16a34a;
+}
+
+
+.modal .restart {
   font-family: Anton, sans-serif;
-  color: #4d4d4d;
-  text-shadow: 0px 3px 0 black;
+  margin: 30px auto;
+
 }
 
 @media (max-width: 480px) {
   .modal .winner {
     font-size: 60px;
   }
-  .card{
+
+  .card {
     width: 43%;
     min-height: 2rem;
   }
 }
 
-.modal .restart {
-  font-family: Anton, sans-serif;
-  margin: 30px auto;
-  
+@media (max-width: 800px) {
+  .card {
+    width: 50%;
+    height: 30%;
+    height: 16.666%;
+  }
+
+  .front,
+  .back {
+    padding: 5px;
+  }
+
+  .back {
+    padding: 10px;
+  }
+}
+
+.tracking-in-expand-fwd-top {
+  animation: tracking-in-expand-fwd-top 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  animation: tracking-in-expand-fwd-top 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+/* --------------- Animacion de texto modal --------------- */
+
+@-webkit-keyframes tracking-in-expand-fwd-top {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px) translateY(-500px);
+    transform: translateZ(-700px) translateY(-500px);
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0.6;
+  }
+
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand-fwd-top {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px) translateY(-500px);
+    transform: translateZ(-700px) translateY(-500px);
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0.6;
+  }
+
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
 }
