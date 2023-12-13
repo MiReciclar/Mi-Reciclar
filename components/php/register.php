@@ -11,7 +11,8 @@
 <body>
     <main class="main dos">
         <div class="cont-form">
-            <form id="login-form" class="form">
+            <!-- Login -->
+            <form id="login-form" class="form" action="./login_usuario.php" method="POST">
                 <h2 class="titulo-form">Iniciar Sesion</h2>
     
                 <input class="user-name" type="text" name="username" placeholder="Nombre de usuario" required>
@@ -22,6 +23,7 @@
                 <a href="#" id="register-form-link" class="link-form">¿No tienes una cuenta? Registrate aqui</a>
             </form>
     
+            <!-- Register -->
             <form id="register-form" class="form">
                 <h2 class="titulo-form">Registrarse</h2>
     
