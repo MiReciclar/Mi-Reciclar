@@ -4,18 +4,22 @@ const filters = [
     id: "categorias",
     title: "Categorías",
     nombre: "categorias",
-    oppciones: [
-      { valor: "todos", label: "Todos los productos" },
-      { valor: "todos", label: "Todos los productos" },
-      { valor: "todos", label: "Todos los productos" },
-      { valor: "todos", label: "Todos los productos" },
+    opciones: [
+      { value: "todos", label: "Todos los productos" },
+      { value: "compras", label: "Compras" },
+      { value: "entretenimiento", label: "Entretenimiento" },
+      { value: "belleza", label: "Belleza" },
+      { value: "tecnologia", label: "Tecnología" },
     ],
   },
   {
     id: "precio",
     title: "Por precio",
     nombre: "precio",
-    oppciones: ["Menor precio", "Menor precio"],
+    opciones: [
+      { value: "mayor", label: "Mayor precio" },
+      { value: "menor", label: "Menor precio" },
+    ],
   },
 ];
 
@@ -70,10 +74,9 @@ const premios = [
     img: "../img/recompensas/petshop.jpg",
     categoria: "compras",
     puntos: 4500,
-    titulo:
-      "Orden de compra $20.000 en alimentos para mascotas y artículos de Pet's Shop",
+    titulo: "Orden de compra $20.000 en artículos de Pet's Shop",
     descripcion:
-      "¡Celebrá el amor por tus mascotas con nuestro Voucher de Compra para Artículos de Pet Shop en [Nombre del Pet Shop]! Este regalo te permite consentir a tus peludos amigos con productos de calidad y cuidado especial.",
+      "¡Celebrá el amor por tus mascotas con nuestro Voucher de Compra para Artículos de Pet Shop en Patitas! Este regalo te permite consentir a tus peludos amigos con productos de calidad y cuidado especial.",
   },
   {
     id: 7,
@@ -82,7 +85,7 @@ const premios = [
     puntos: 2000,
     titulo: "Limpieza Facial + Peeling con ác. glicólico",
     descripcion:
-      "¡Hacé espacio para la renovación y el resplandor con nuestro Voucher para una Limpieza Facial y Peeling en Centro Bruma! Este premio te invita a experimentar el lujo de cuidado de la piel y a disfrutar de una sesión revitalizante.",
+      "¡Hacé espacio para la renovación y el resplandor con nuestro Voucher para una Limpieza Facial y Peeling en Centro Bruma! Experimenta el lujo de cuidado de la piel y a disfrutar de una sesión revitalizante.",
   },
   {
     id: 8,
@@ -100,7 +103,7 @@ const premios = [
     puntos: 30000,
     titulo: "Smart TV 55'",
     descripcion:
-      "¡Preparate para una experiencia de entretenimiento envolvente con nuestro Voucher para una Televisión de 55 Pulgadas en MusiMundo! Este regalo te brinda la oportunidad de disfrutar de imágenes vibrantes y sonido envolvente en la comodidad de tu hogar.",
+      "¡Preparate para una experiencia de entretenimiento envolvente con nuestro Voucher para una Televisión de 55 Pulgadas en MusiMundo! Tené la oportunidad de disfrutar de imágenes vibrantes y sonido envolvente en la comodidad de tu hogar.",
   },
   {
     id: 10,
@@ -118,16 +121,20 @@ const divPremios = document.getElementById("premios");
 const renderPremios = (arrayDePremios) => {
   divPremios.innerHTML = arrayDePremios
     .map((premio) => {
-      return `<div data-categoria=${premio.categoria} class="premios flex shadow-2xl w-[650px] h-[220px] rounded-lg border-green-600 border-2">
+      return `<div data-categoria=${
+        premio.categoria
+      } class="premios flex shadow-2xl w-full max-w-[600px] h-[300px] rounded-lg p-4 bg-green-100" onmouseover="renderBlurOverlay(${JSON.stringify(
+        premio
+      )})" onmouseout="removeBlurOverlay()">
         <div
-          class="w-48 flex-none bg-cover bg-center bg-no-repeat rounded-t text-center overflow-hidden"
+          class="w-48 flex-none bg-cover bg-center bg-no-repeat text-center overflow-hidden rounded-lg"
           style="background-image: url(${premio.img})"
           title=""
         ></div>
         <div
-          class="bg-white p-4 flex flex-col justify-between leading-normal"
+          class="bg-white p-4 flex flex-col justify-between m-3 leading-normal shadow-md"
         >
-          <div class="mb-8">
+          <div>
             <p
               class="text-lg font-semibold text-green-800 flex items-center"
             >
@@ -160,9 +167,11 @@ renderPremios(premios);
 const selectFiltroCategorias = document.getElementById("filtrosCategorias");
 const selectFiltroPrecio = document.getElementById("filtrosPrecio");
 
-const filtrarYOrdenar = () => {
-  const valorCategoria = selectFiltroCategorias.value;
-  const valorPrecio = selectFiltroPrecio.value;
+const filtrarYOrdenar = (primerFiltro, segundoFiltro) => {
+  const valorCategoria = primerFiltro.value;
+  const valorPrecio = segundoFiltro.value;
+
+  console.log(valorCategoria);
 
   let productosFiltrados = premios.filter(
     (premio) =>
@@ -176,5 +185,59 @@ const filtrarYOrdenar = () => {
   }
   renderPremios(productosFiltrados);
 };
-selectFiltroPrecio.addEventListener("change", filtrarYOrdenar);
-selectFiltroCategorias.addEventListener("change", filtrarYOrdenar);
+
+const contenedorFiltros = document.getElementById("contenedorFiltros");
+
+const renderFiltros = () => {
+  contenedorFiltros.innerHTML = filters
+    .map((filtro) => {
+      return `<div class="flex flex-col text-xl text-green-800 font-semibold gap-2">
+    <h2 class="text-white" style="text-shadow: 3px 6px 20px black;">${
+      filtro.title
+    }</h2>
+    <select name=${filtro.nombre} id=${
+        filtro.id
+      } class="p-2 rounded-lg shadow-md">
+      ${filtro.opciones.map((opcion) => {
+        return `<option value=${opcion.value}>${opcion.label}</option>`;
+      })}
+    </select>
+  </div>`;
+    })
+    .join("");
+
+  const idCategorias = filters.find((filtro) => filtro.id === "categorias");
+  const idPrecio = filters.find((filtro) => filtro.id === "precio");
+
+  const selectCategorias = document.getElementById(idCategorias.id);
+  const selectPrecio = document.getElementById(idPrecio.id);
+
+  filters.forEach((filtro) => {
+    const select = document.getElementById(filtro.id);
+    select.addEventListener("change", () => {
+      filtrarYOrdenar(selectCategorias, selectPrecio);
+    });
+  });
+};
+
+renderFiltros();
+
+const renderBlurOverlay = (premio) => {
+  const overlay = document.createElement("div");
+  overlay.classList.add("overlay");
+
+  overlay.innerHTML = `<div class="overlay-content">
+  <h2>${premio.titulo}</h2>
+  <p>${premio.descripcion}</p>
+  <button class="adquirir-btn">Adquirir</button>
+</div>`;
+
+  divPremios.appendChild(overlay);
+
+  const removeOverlayBlur = () => {
+    const overlay = document.querySelector(".overlay");
+    if (overlay) {
+      overlay.remove;
+    }
+  };
+};

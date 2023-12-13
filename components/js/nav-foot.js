@@ -5,7 +5,6 @@ const hamburguerMenu = document.getElementById("mobile-menu");
 const hamburguer = document.getElementById("hamburger");
 const hamburgerBars = document.querySelectorAll("#hamburger .bar");
 
-console.log(hamburgerBars);
 // Methods
 const handleModal = () => {
   userMenu.classList.toggle("opacity-100");
@@ -57,10 +56,8 @@ renderNavigationItems();
 
 const renderNavigationItemsMobile = () => {
   const navContainerMobile = document.getElementById("mobile-menu");
-  console.log(navContainerMobile);
   navContainerMobile.innerHTML = navigationItems
     .map((item) => {
-      console.log(item);
       return `<a
     href=${item.nav}
     class="text-white hover:bg-green-800 rounded-md px-3 py-2 lg:text-lg font-medium text-sm"
