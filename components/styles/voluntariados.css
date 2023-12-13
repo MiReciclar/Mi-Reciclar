@@ -16,10 +16,10 @@ h1, h2, h3 {
 
 .grid-container {
   justify-content: center;
-  width: 95%;
+  width: 99%;
   place-content: center;
   display: grid;
-  gap: 20px;
+  gap: 30px;
   padding: 20px;
   text-align: center;
 }
@@ -85,11 +85,42 @@ h1, h2, h3 {
 }
 
 .grid-item-content img {
-  width: 100%;
+  width: 98%;
   height: 100%;
   object-fit: cover;
   border-radius: 8px 8px 0 0;
 }
+
+.inscribirse-button {
+  position: absolute;
+  top: 10px; /* Ajusta la posición vertical según tus necesidades */
+  right: 10px; /* Ajusta la posición horizontal según tus necesidades */
+  z-index: 2; /* Asegura que el botón esté sobre la imagen y el overlay */
+  background-color: #24563f;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+
+  /* Añade bordes adicionales para la esquina puntiaguda */
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* Ajustes para la versión mobile */
+@media only screen and (max-width: 768px) {
+  .inscribirse-button {
+    top: 5px;
+    right: 5px;
+    padding: 6px 10px;
+  }
+}
+
 
 .text-overlay {
   position: absolute;
