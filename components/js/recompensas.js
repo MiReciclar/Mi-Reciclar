@@ -5,11 +5,10 @@ const filters = [
     title: "Categorías",
     nombre: "categorias",
     oppciones: [
-      "Todos los productos",
-      "Compras",
-      "Entretenimiento",
-      "Belleza",
-      "Tecnología",
+      { valor: "todos", label: "Todos los productos" },
+      { valor: "todos", label: "Todos los productos" },
+      { valor: "todos", label: "Todos los productos" },
+      { valor: "todos", label: "Todos los productos" },
     ],
   },
   {
