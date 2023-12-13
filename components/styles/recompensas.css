@@ -27,11 +27,22 @@
   width: 90%;
 }
 
-.card > img {
+.imagen-1 {
   width: 55%;
+  height: 43%;
   position: absolute;
   top: -6%;
   left: -6%;
+  border-radius: 10px;
+  box-shadow: 1px 1px 20px black;
+}
+
+.imagen-2 {
+  width: 55%;
+  height: 44%;
+  position: absolute;
+  top: -6%;
+  left: 50%;
   border-radius: 10px;
   box-shadow: 1px 1px 20px black;
 }
@@ -41,7 +52,8 @@
 }
 
 .card-color-1 {
-  background-color: #8bd47e;
+  color: #042900;
+  background-color: #90b77d;
 }
 
 .overlay {
