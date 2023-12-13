@@ -7,12 +7,12 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../styles/nav-foot.css" />
   <link rel="stylesheet" href="./style.css">
-  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <title>Index</title>
 </head>
 
 <body>
-  <nav class="bg-green-600">
+  <nav class="bg-green-600" id="nav">
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
       <div class="relative flex h-20 items-center justify-between">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -91,122 +91,106 @@
     </div>
   </nav>
 
-  <!---->
-  <div class="banner">
-    <h1>Mi Reciclar</h1>
-  </div>
+  <!--inicio-->
+  <div class="banner"></div>
   <div class="content">
     <div class="wrapper">
       <h2>Mi Reciclar</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quos consequuntur aut? Animi, iusto laboriosam
-        perferendis praesentium repellendus iure labore ex atque quas deleniti? Harum incidunt odit voluptatum possimus
-        minus. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, quos aliquid? Expedita assumenda,
-        distinctio voluptas voluptatem, illo quia minima a quasi ut magni voluptates blanditiis id consectetur
-        aspernatur! Doloremque, eaque.</p> <br><br>
+      <p>Con "Mi Reciclar" la misión de proteger nuestro planeta se vuelve personal.<br>Cada acción cuenta, cada acción
+        suma y con esta aplicación te guíaremos de manera amigable y eficiente en tu viaje hacia un estilo de vida más
+        sustentable y amigable con el medio ambiente.</p> <br><br>
     </div>
 
     <!--CARDS-->
     <div class="wrappercards">
-      <h1>Manera correcta de reciclar</h1>
-      
+
+      <h1 id="guia">GUÍA DE RECICLAJE</h1>
+      <p >Todos los residuos deben estar <strong>LIMPIOS Y SECOS</strong> </p>
       <div>
         <div class="cols">
           <div class="col" ontouchstart="this.classList.toggle('hover');">
             <div class="container">
-              <div class="front" style="background-image: url(https://unsplash.it/500/500/)">
+              <div class="front" style="background-image: url(./components/img/img-index/papel-carton.jpg)">
                 <div class="inner">
-                  <p>Diligord</p>
-                  <span>Lorem ipsum</span>
+                  <p>PAPEL Y CARTON</p>
                 </div>
               </div>
               <div class="back">
                 <div class="inner">
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.
-                  </p>
+                  <p>Periódicos, revistas, cartón, cajas, papel de oficina y otros productos de papel.</p>
                 </div>
               </div>
             </div>
           </div>
           <div class="col" ontouchstart="this.classList.toggle('hover');">
             <div class="container">
-              <div class="front" style="background-image: url(https://unsplash.it/511/511/)">
+              <div class="front" style="background-image: url(./components/img/img-index/plastico.jpg)">
                 <div class="inner">
-                  <p>Rocogged</p>
-                  <span>Lorem ipsum</span>
+                  <p>PLÁSTICO</p>
                 </div>
               </div>
               <div class="back">
                 <div class="inner">
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.
-                  </p>
+                  <p>Botellas de plástico, envases de alimentos, bolsas de plástico, etc..</p>
                 </div>
               </div>
             </div>
           </div>
           <div class="col" ontouchstart="this.classList.toggle('hover');">
             <div class="container">
-              <div class="front" style="background-image: url(https://unsplash.it/502/502/)">
+              <div class="front" style="background-image: url(./components/img/img-index/metal.jpg)">
                 <div class="inner">
-                  <p>Strizzes</p>
-                  <span>Lorem ipsum</span>
+                  <p>METAL</p>
                 </div>
               </div>
               <div class="back">
                 <div class="inner">
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.
-                  </p>
+                  <p>Latas de aluminio, latas de acero, envases de metal, etc. </p>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
 
         <div class="cols">
           <div class="col" ontouchstart="this.classList.toggle('hover');">
             <div class="container">
-              <div class="front" style="background-image: url(https://unsplash.it/500/500/)">
+              <div class="front" style="background-image: url(./components/img/img-index/vidrio.jpeg)">
                 <div class="inner">
-                  <p>Diligord</p>
-                  <span>Lorem ipsum</span>
+                  <p>VIDRIO</p>
                 </div>
               </div>
               <div class="back">
                 <div class="inner">
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.
-                  </p>
+                  <p>Botellas y frascos de vidrio. Asegúrate de quitar las tapas y etiquetas antes de reciclar.</p>
                 </div>
               </div>
             </div>
           </div>
           <div class="col" ontouchstart="this.classList.toggle('hover');">
             <div class="container">
-              <div class="front" style="background-image: url(https://unsplash.it/511/511/)">
+              <div class="front" style="background-image: url(./components/img/img-index/electrodomesticos.jpeg)">
                 <div class="inner">
-                  <p>Rocogged</p>
-                  <span>Lorem ipsum</span>
+                  <p>ELECTRÓNICOS</p>
                 </div>
               </div>
               <div class="back">
                 <div class="inner">
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.
-                  </p>
+                  <p>Dispositivos electrónicos como teléfonos móviles, computadoras, impresoras, etc.</p>
                 </div>
               </div>
             </div>
           </div>
           <div class="col" ontouchstart="this.classList.toggle('hover');">
             <div class="container">
-              <div class="front" style="background-image: url(https://unsplash.it/502/502/)">
+              <div class="front" style="background-image: url(./components/img/img-index/neumaticos.jpg)">
                 <div class="inner">
-                  <p>Strizzes</p>
-                  <span>Lorem ipsum</span>
+                  <p>NEUMÁTICOS</p>
                 </div>
               </div>
               <div class="back">
                 <div class="inner">
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.
-                  </p>
+                  <p>Neumáticos usados para su reciclaje o reutilización en productos como caucho granulado</p>
                 </div>
               </div>
             </div>
@@ -214,10 +198,53 @@
         </div>
       </div>
     </div>
+
     <!--Jornadas Solidarias-->
 
+    <section class="jornadas"> 
+      <div>
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img src="./components/img/img-index/bannerplanta.jpeg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>First slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+            <button type="button" class="btn btn-outline-success">Success</button>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="..." class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="..." class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  </section>
 
-
+   Footer
     <footer class="py-6 bg-green-800 dark:text-gray-50">
       <div class="container px-6 mx-auto space-y-6 divide-y dark:divide-gray-400 md:space-y-12 divide-opacity-50">
         <div class="grid grid-cols-12">
@@ -302,7 +329,11 @@
         </div>
       </div>
     </footer>
+    <script src="scrip.js" ></script>
     <script src="../js/nav-foot.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </body>
-
+  
 </html>
