@@ -21,9 +21,7 @@
     $img_perfil = $datos_usuario['img_perfil'];
     $puntos = $datos_usuario['puntos'];
   }
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,7 +35,8 @@
     <title>Perfil</title>
 </head>
 <body>
-    <nav class="bg-green-600">
+
+<nav class="bg-green-600">
         <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
           <div class="relative flex h-20 items-center justify-between">
             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -54,7 +53,7 @@
                 <div id="bar3" class="bar"></div>
               </button>
             </div>
-  
+
             <div
               class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
             >
@@ -62,41 +61,15 @@
               <div class="flex flex-shrink-0 items-center">
                 <img
                   class="h-12 w-auto rounded-full bg-white"
-                  src="/components/img/logo-reciclar-removebg-preview.png"
+                  src="../img/logo-reciclar-removebg-preview.png"
                   alt="Mi Reciclar"
                 />
               </div>
               <div class="hidden sm:ml-6 sm:block">
-                <div class="flex space-x-3">
-                  <a
-                    href="../htmls/nosotros.html"
-                    class="text-white hover:bg-green-800 rounded-md px-3 py-2 lg:text-lg font-medium text-sm"
-                    >Nuestra Misión</a
-                  >
-                  <a
-                    href="#"
-                    class="text-white hover:bg-green-800 rounded-md px-3 py-2 lg:text-lg font-medium text-sm"
-                    >Recompensas</a
-                  >
-                  <a
-                    href="../htmls/voluntariados.html"
-                    class="text-white hover:bg-green-800 rounded-md px-3 py-2 lg:text-lg font-medium text-sm"
-                    >Jornadas</a
-                  >
-                  <a
-                    href="#"
-                    class="text-white hover:bg-green-800 rounded-md px-3 py-2 lg:text-lg font-medium text-sm"
-                    >Eco Noticias</a
-                  >
-                  <a
-                    href="#"
-                    class="text-white hover:bg-green-800 rounded-md px-3 py-2 lg:text-lg font-medium text-sm"
-                    >Contacto</a
-                  >
-                </div>
+                <div id="navContainer" class="flex space-x-3"></div>
               </div>
             </div>
-  
+
             <div
               class="absolute inset-y-0 right-0 flex items-center sm:static sm:inset-auto sm:ml-6 sm:pr-0"
             >
@@ -112,12 +85,12 @@
                   >
                     <img
                       class="h-11 w-11 rounded-full"
-                      src="/components/img/image-removebg-preview (1).png"
+                      src="../img/image-removebg-preview (1).png"
                       alt="emoji-usuario"
                     />
                   </button>
                 </div>
-  
+
                 <!-- MODAL USUARIO -->
                 <div
                   id="user-menu"
@@ -128,7 +101,7 @@
                   tabindex="-1"
                 >
                   <a
-                    href="../htmls/perfilUsuario.html"
+                    href="../php/perfilUsuario.php"
                     class="block px-4 py-2 text-lg text-green-800"
                     role="menuitem"
                     tabindex="-1"
@@ -136,7 +109,7 @@
                     >Mi Perfil</a
                   >
                   <a
-                    href="../htmls/register.html"
+                    href="../php/register.php"
                     class="block px-4 py-2 text-lg text-green-800"
                     role="menuitem"
                     tabindex="-1"
@@ -148,52 +121,35 @@
                     class="block px-4 py-2 text-lg text-green-800"
                     role="menuitem"
                     tabindex="-1"
-                    id="user-menu-item-1"
+                    id="user-menu-item-2"
                     >Eco Memo</a
                   >
+                  <a
+                    href="../php/cerrar_sesion.php"
+                    class="block px-4 py-2 text-lg text-green-800"
+                    role="menuitem"
+                    tabindex="-1"
+                    id="user-menu-item-2"
+                    >Salir</a
                 </div>
               </div>
             </div>
           </div>
         </div>
-  
+
         <!-- Menu mobile -->
-        <div class="md:hidden hidden" id="mobile-menu">
-          <div class="space-y-1 px-2 pb-3 pt-2">
-            <a
-              href="#"
-              class="text-white hover:bg-green-800 block rounded-md px-3 py-2 text-base font-medium"
-              >Nuestra Misión</a
-            >
-            <a
-              href="#"
-              class="text-white hover:bg-green-800 block rounded-md px-3 py-2 text-base font-medium"
-              >Recompensas</a
-            >
-            <a
-              href="#"
-              class="text-white hover:bg-green-800 block rounded-md px-3 py-2 text-base font-medium"
-              >Jornadas</a
-            >
-            <a
-              href="#"
-              class="text-white hover:bg-green-800 block rounded-md px-3 py-2 text-base font-medium"
-              >Eco Noticias</a
-            >
-            <a
-              href="#"
-              class="text-white hover:bg-green-800 block rounded-md px-3 py-2 text-base font-medium"
-              >Contacto</a
-            >
-          </div>
-        </div>
+        <div class="md:hidden hidden flex flex-columns" id="mobile-menu"></div>
       </nav>
+
     <div class="perfil-cont">
         <div class="perfil-datos-cont">
-          <a href="../php/cerrar_sesion.php">Salir</a>
             <div class="foto-perfil-cont">
               <?php
-                echo "<img class='foto-perfil' src='$img_perfil' alt='foto de perfil del usuario'>";
+                if (file_exists($img_perfil)) {
+                  echo "<img class='foto-perfil' src='$img_perfil' alt='foto de perfil del usuario'>";
+              } else {
+                echo "<img class='foto-perfil' src='../img/img-perfil/sin foto 2.png' alt='foto de perfil del usuario'>";
+              }
               ?>
                 <!-- <img class="foto-perfil" src="../img/img-perfil/sin foto 2.png" alt="foto de perfil del usuario"> -->
                 <div class="btn-modificar modif-img-perfil"></div>
@@ -238,15 +194,12 @@
             $usuario_nuevo = $_POST['edit-usuario'];
 
             if(!empty($usuario_nuevo)){
-              echo $usuario_nuevo;
-              
               $consulta = "UPDATE usuario SET usuario = '$usuario_nuevo' WHERE id = '$id'";
               $resultado = mysqli_query($conectar, $consulta);
 
               if($resultado){
                 echo '<div class = "mensaje mensaje-exito">Actualización exitosa</div>';
-                sleep(5);
-                header("location:../php/perfilUsuario.php");
+                echo '<script>window.location.href = "../php/perfilUsuario.php";</script>';
               }else{
                 echo '<div class = "mensaje mensaje-error">Error al actualizar</div>';
               }
@@ -288,6 +241,7 @@
 
               if($resultado){
                 echo '<div class = "mensaje mensaje-exito">Actualización exitosa</div>';
+                echo '<script>window.location.href = "../php/perfilUsuario.php";</script>';
               }else{
                 echo '<div class = "mensaje mensaje-error">Error al actualizar</div>';
               }

@@ -12,9 +12,113 @@
     <link rel="stylesheet" href="../styles/register.css">
     <link rel="shortcut icon" href="../img/logo-reciclar-removebg-preview.png" type="image/x-icon"/>
 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../styles/nav-foot.css" />
+    <link rel="stylesheet" href="../styles/perfil.css">
+    <link rel="shortcut icon" href="../img/logo-reciclar-removebg-preview.png" type="image/x-icon"/>
+
     <title>Inicio Sesion</title>
 </head>
 <body>
+
+<nav class="bg-green-600">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div class="relative flex h-20 items-center justify-between">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <!-- Hamburguesa mobile -->
+              <button
+                type="button"
+                id="hamburger"
+                class="relative flex-column items-center justify-center rounded-md p-2 text-white hover:bg-green-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+              >
+                <div id="bar1" class="bar"></div>
+                <div id="bar2" class="bar"></div>
+                <div id="bar3" class="bar"></div>
+              </button>
+            </div>
+
+            <div
+              class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
+            >
+              <!-- Links navbar  -->
+              <div class="flex flex-shrink-0 items-center">
+                <img
+                  class="h-12 w-auto rounded-full bg-white"
+                  src="../img/logo-reciclar-removebg-preview.png"
+                  alt="Mi Reciclar"
+                />
+              </div>
+              <div class="hidden sm:ml-6 sm:block">
+                <div id="navContainer" class="flex space-x-3"></div>
+              </div>
+            </div>
+
+            <div
+              class="absolute inset-y-0 right-0 flex items-center sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+            >
+              <!-- Usuario -->
+              <div class="relative ml-3">
+                <div>
+                  <button
+                    type="button"
+                    class="relative flex rounded-full focus:ring-2 focus:ring-green-800"
+                    id="user-menu-button"
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                  >
+                    <img
+                      class="h-11 w-11 rounded-full"
+                      src="../img/image-removebg-preview (1).png"
+                      alt="emoji-usuario"
+                    />
+                  </button>
+                </div>
+
+                <!-- MODAL USUARIO -->
+                <div
+                  id="user-menu"
+                  class="opacity-0 absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none transition opacity transform duration-300 ease-out"
+                  role="menu"
+                  aria-orientation="vertical"
+                  aria-labelledby="user-menu-button"
+                  tabindex="-1"
+                >
+                  <a
+                    href="../php/perfilUsuario.php"
+                    class="block px-4 py-2 text-lg text-green-800"
+                    role="menuitem"
+                    tabindex="-1"
+                    id="user-menu-item-0"
+                    >Mi Perfil</a
+                  >
+                  <a
+                    href="../php/register.php"
+                    class="block px-4 py-2 text-lg text-green-800"
+                    role="menuitem"
+                    tabindex="-1"
+                    id="user-menu-item-1"
+                    >Iniciar Sesión</a
+                  >
+                  <a
+                    href="../htmls/Eco-Memo.html"
+                    class="block px-4 py-2 text-lg text-green-800"
+                    role="menuitem"
+                    tabindex="-1"
+                    id="user-menu-item-2"
+                    >Eco Memo</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Menu mobile -->
+        <div class="md:hidden hidden flex flex-columns" id="mobile-menu"></div>
+      </nav>
+
     <main class="main dos">
         <div class="cont-form">
             <!-- Login -->
@@ -128,5 +232,6 @@
     </main>
 
     <script src="../js/register.js"></script>
+    <script src="../js/nav-foot.js"></script>
 </body>
 </html>
