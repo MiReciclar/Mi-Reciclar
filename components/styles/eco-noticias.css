@@ -1,126 +1,122 @@
 /* ---------------- General -------------- */
 * {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 16px;
-    box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+body {
+  padding-top: 84px;
+  background-color: #fff9db;
+}
+nav,
+.bg-green-600 {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+}
 
-}
-body{
-    padding-top: 84px;
-}
-nav, .bg-green-600{
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 9999;
-}
 /* -------------MOBILE FIRST ------------- */
 /* --------------- CARD CONTAINER -------------------- */
 .container-news {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #fff9db;
-    gap: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 /* ---------------- CARD ----------------- */
 .card-news {
-    display: flex;
-    flex-direction: column;
-    gap: .7rem;
-    padding: .9rem;
-    min-width: 320px;
-    min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 0.9rem;
+  min-width: 320px;
+  min-height: 200px;
 }
 .card-img {
-    width: 100%;
-    border-radius: .3rem;
-
+  width: 100%;
+  border-radius: 0.3rem;
 }
 
 .card-img img {
-    border-radius: .3rem;
-    width: 100%;
-    height: 100%;
-    zoom: 10px;
-    min-width: 200px;
-    box-shadow: 1px 1px 20px 1px #d0cece inset;
+  border-radius: 0.3rem;
+  width: 100%;
+  height: 100%;
+  zoom: 10px;
+  min-width: 200px;
+  box-shadow: 1px 1px 20px 1px #d0cece inset;
 }
 
 .card-text {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    column-gap: 1rem;
-    row-gap: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 1rem;
+  row-gap: 1rem;
 }
 
 .card-text-title {
-    background-color: #16a34a;
-    border-radius: .3rem;
-    color: #fff;
-    font-size: 1.3rem;
-    font-weight: 600;
-    text-align: center;
-    padding: .13rem;
+  background-color: #16a34a;
+  border-radius: 0.3rem;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 0.13rem;
 }
 
 .card-text-resume {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
-    overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.card-text-resume, .card-text-title{
-    max-width: 300px;
-    min-width: 200px;
-    
+.card-text-resume,
+.card-text-title {
+  max-width: 300px;
+  min-width: 200px;
 }
 
 .btn-see-more {
-    background-color: #0D4C72;
-    color: #fff;
-    padding: .3rem .5rem;
-    border-radius: .3rem;
-    font-weight: bold;
-    min-width: 90px;
+  background-color: #0d4c72;
+  color: #fff;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.3rem;
+  font-weight: bold;
+  min-width: 90px;
 }
-
 
 /* ------------MEDIA QUERIES -----------------  */
 @media screen and (min-width: 600px) {
-    .container-news{
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
-    .card-news{
-        flex-direction: row;
-        min-width: 400px;
-    }
-    .card-text{
-        justify-content: space-between;
-
-    }
-
-    
+  .container-news {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .card-news {
+    flex-direction: row;
+    min-width: 400px;
+  }
+  .card-text {
+    justify-content: space-between;
+  }
 }
-@media  screen and (min-width: 1200px) {
-    .card-news{
-        width: 40%;
-        max-height: 300px;
-    }
-    .card-img{
-        max-height: 300px;
-    }
-    .card-text-resume{
-        overflow: hidden;
-        text-overflow: ellipsis;
-        -moz-line-clamp: 3;
-    }
+@media screen and (min-width: 1200px) {
+  .card-news {
+    width: 40%;
+    max-height: 300px;
+  }
+  .card-img {
+    max-height: 300px;
+  }
+  .card-text-resume {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -moz-line-clamp: 3;
+  }
 }
