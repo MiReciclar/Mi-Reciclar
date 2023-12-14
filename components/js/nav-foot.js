@@ -6,24 +6,35 @@ const hamburguer = document.getElementById("hamburger");
 const hamburgerBars = document.querySelectorAll("#hamburger .bar");
 
 // Methods
+let banderaHamburguer = false;
 const handleModal = () => {
-  userMenu.classList.toggle("opacity-100");
-  userMenu.classList.toggle("scale-100");
-  userMenu.classList.toggle("opacity-0");
-  userMenu.classList.toggle("scale-95");
+  banderaHamburguer = !banderaHamburguer;
+  // userMenu.classList.toggle("opacity-100");
+  // userMenu.classList.toggle("scale-100");
+  // // userMenu.classList.toggle("opacity-0");
+  // userMenu.classList.toggle("scale-95");
+
+  if (banderaHamburguer) {
+    userMenu.style.display = "block";
+    userMenu.style.opacity = "1";
+  }else{
+    userMenu.style.display = "none";
+    userMenu.style.opacity = "0";
+  }
+  
 };
 smiley.addEventListener("click", handleModal);
 
 const handleHamburguer = () => {
-  hamburguerMenu.classList.toggle("hidden");
-  hamburguerMenu.classList.toggle("md:hidden");
-  hamburguerMenu.classList.toggle("custom-modal");
+  // hamburguerMenu.classList.toggle("hidden");
+  // hamburguerMenu.classList.toggle("md:hidden");
+  // hamburguerMenu.classList.toggle("custom-modal");
 };
 hamburguer.addEventListener("click", handleHamburguer);
 
 // ! NAVBAR RENDER
 const navigationItems = [
-  { id: "inicio", label: "Inicio", nav: "/index.html" },
+  { id: "inicio", label: "Inicio", nav: "../../index.html" },
   {
     id: "nuestraMision",
     label: "Nuestra Misión",

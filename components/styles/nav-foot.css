@@ -3,6 +3,10 @@
     display: block;
 }
 
+#user-menu{
+    display: none;
+}
+
 .bar {
     width: 25px;
     height: 2px;
