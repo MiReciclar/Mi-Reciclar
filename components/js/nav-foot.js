@@ -7,10 +7,11 @@ const hamburgerBars = document.querySelectorAll("#hamburger .bar");
 
 // Methods
 const handleModal = () => {
-  userMenu.classList.toggle("opacity-100");
-  userMenu.classList.toggle("scale-100");
-  userMenu.classList.toggle("opacity-0");
-  userMenu.classList.toggle("scale-95");
+  if (userMenu.classList.contains("hidden")) {
+    userMenu.classList.remove("hidden");
+  } else {
+    userMenu.classList.add("hidden");
+  }
 };
 smiley.addEventListener("click", handleModal);
 
