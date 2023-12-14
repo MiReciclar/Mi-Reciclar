@@ -60,7 +60,7 @@
 
 .btn-form{
     width: 100%;
-    background-color: #4CAF50;
+    background-color: #4CAF50 !important;
     /* 24563f */
     border: none;
     border-radius: 5px;

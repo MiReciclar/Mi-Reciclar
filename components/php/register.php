@@ -155,7 +155,8 @@
                             echo $datos_usuario['contrasenia'];
                 
                             $_SESSION['id'] = $datos_usuario['id'];
-                            header("location:../php/perfilUsuario.php");
+
+                            echo '<script>window.location.href = "../php/perfilUsuario.php";</script>';
                         }else{
                             echo '<div class = "mensaje mensaje-error">Usuario o contraseña incorrectos</div>';
                         }
