@@ -20,7 +20,7 @@
     }
   </style>
   <body>
-    <nav class="bg-green-600">
+    <nav class="bg-green-600 fixed z-50 w-full">
       <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-20 items-center justify-between">
           <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -45,7 +45,7 @@
             <div class="flex flex-shrink-0 items-center">
               <img
                 class="h-12 w-auto rounded-full bg-white"
-                src="/components/img/logo-reciclar-removebg-preview.png"
+                src="../img/logo-reciclar-removebg-preview.png"
                 alt="Mi Reciclar"
               />
             </div>
@@ -69,7 +69,7 @@
                 >
                   <img
                     class="h-11 w-11 rounded-full"
-                    src="/components/img/image-removebg-preview (1).png"
+                    src="../img/image-removebg-preview (1).png"
                     alt="emoji-usuario"
                   />
                 </button>
@@ -85,7 +85,7 @@
                 tabindex="-1"
               >
                 <a
-                  href="../htmls/perfilUsuario.html"
+                  href="../php/perfilUsuario.php"
                   class="block px-4 py-2 text-lg text-green-800"
                   role="menuitem"
                   tabindex="-1"
@@ -93,7 +93,7 @@
                   >Mi Perfil</a
                 >
                 <a
-                  href="../htmls/register.html"
+                  href="../php/register.php"
                   class="block px-4 py-2 text-lg text-green-800"
                   role="menuitem"
                   tabindex="-1"
@@ -117,7 +117,7 @@
       <!-- Menu mobile -->
       <div class="md:hidden hidden flex flex-columns" id="mobile-menu"></div>
     </nav>
-    <main>
+    <main class="pt-[80px] z-0">
       <section
         class="h-[250px] relative nosotros-sections bg-[url(../img/nosotros/spotgreen.jpg)] bg-cover bg-center bg-no-repeat flex pt-22"
       >
@@ -133,8 +133,7 @@
         <div class="absolute w-full h-full top-0 bg-black z-0 opacity-25"></div>
       </section>
 
-
-<!-- Form -->
+      <!-- Form -->
       <section class="relative z-20 flex justify-center items-center">
         <div
           class="bg-white rounded-xl flex gap-8 justify-center items-start p-12 mt-[-50px] shadow-2xl"
@@ -154,6 +153,7 @@
                   type="text"
                   placeholder=""
                   required
+                  name="nombre"
                 />
               </div>
               <div class="w-full md:w-1/2 px-3">
@@ -169,6 +169,7 @@
                   type="text"
                   placeholder=""
                   required
+                  name="apellido"
                 />
               </div>
             </div>
@@ -186,6 +187,7 @@
                   type="text"
                   placeholder=""
                   required
+                  name="mensaje"
                 />
               </div>
             </div>
@@ -206,8 +208,7 @@
           </div>
         </div>
       </section>
-<!-- form -->
-
+      <!-- form -->
 
       <section
         class="flex h-[200px] justify-center items-center gap-3 m-[75px]"
@@ -230,7 +231,9 @@
       </section>
     </main>
     <footer class="py-6 bg-green-800 dark:text-gray-50">
-      
+      <div
+        class="container px-6 mx-auto space-y-6 divide-y dark:divide-gray-400 md:space-y-12 divide-opacity-50"
+      >
         <div class="grid grid-cols-12">
           <div class="pb-6 col-span-full md:pb-0 md:col-span-6">
             <a

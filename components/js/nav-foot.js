@@ -23,7 +23,7 @@ hamburguer.addEventListener("click", handleHamburguer);
 
 // ! NAVBAR RENDER
 const navigationItems = [
-  { id: "inicio", label: "Inicio", nav: "/index.html" },
+  { id: "inicio", label: "Inicio", nav: "../../index.html" },
   {
     id: "nuestraMision",
     label: "Nuestra Misión",

@@ -5,16 +5,15 @@
   box-sizing: border-box;
 }
 body {
-  padding-top: 84px;
   background-color: #fff9db;
 }
-nav,
+/* nav,
 .bg-green-600 {
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 9999;
-}
+} */
 
 /* -------------MOBILE FIRST ------------- */
 /* --------------- CARD CONTAINER -------------------- */
