@@ -1,7 +1,35 @@
+const { get } = require('http');
+const nodemailer = require('nodemailer');
+
 // ! ALERTA DE FORMULARIO
 document
   .getElementById("formulario")
   .addEventListener("submit", function (event) {
+    //----------------------------------------
+    const formBody = document.getElementById('Mensaje')
+
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: 'mireciclar.2023@gmail.com',
+        pass: 'MiReciclar2023!',
+      },
+    });
+
+    () => {
+      // send mail with defined transport object
+        transporter.sendMail({
+        from: '"Fred Foo 👻" <mireciclar.2023@gmail.com>', // sender address
+        to: "mireciclar.2023@gmail.com", // list of receivers
+        subject: "", // Subject line
+        text: `${formBody}`, // plain text body
+        //html: "<b>Hello world?</b>", // html body
+
+      });
+      console.log("Message sent: %s", info.messageId);
+    }
+    //----------------------------------------
+    console.log('hola');
     event.preventDefault();
     Swal.fire({
       position: "center",
