@@ -11,11 +11,10 @@
     />
     <link rel="stylesheet" href="../styles/nav-foot.css" />
     <link rel="stylesheet" href="../styles/eco-noticias.css" />
-    <script src="../js/eco-noticias.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <nav class="bg-green-600">
+    <nav class="bg-green-600 fixed w-full">
       <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-20 items-center justify-between">
           <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -40,7 +39,7 @@
             <div class="flex flex-shrink-0 items-center">
               <img
                 class="h-12 w-auto rounded-full bg-white"
-                src="/components/img/logo-reciclar-removebg-preview.png"
+                src="../img/logo-reciclar-removebg-preview.png"
                 alt="Mi Reciclar"
               />
             </div>
@@ -64,7 +63,7 @@
                 >
                   <img
                     class="h-11 w-11 rounded-full"
-                    src="/components/img/image-removebg-preview (1).png"
+                    src="../img/image-removebg-preview (1).png"
                     alt="emoji-usuario"
                   />
                 </button>
@@ -80,7 +79,7 @@
                 tabindex="-1"
               >
                 <a
-                  href="../htmls/perfilUsuario.html"
+                  href="../php/perfilUsuario.php"
                   class="block px-4 py-2 text-lg text-green-800"
                   role="menuitem"
                   tabindex="-1"
@@ -88,7 +87,7 @@
                   >Mi Perfil</a
                 >
                 <a
-                  href="../htmls/register.html"
+                  href="../php/register.php"
                   class="block px-4 py-2 text-lg text-green-800"
                   role="menuitem"
                   tabindex="-1"
@@ -112,14 +111,16 @@
       <!-- Menu mobile -->
       <div class="md:hidden hidden flex flex-columns" id="mobile-menu"></div>
     </nav>
-    <main>
-      <h1
-        class="text-green-600 text-5xl m-4 shadow-lg rounded-lg text-center p-6 bg-white font-semibold"
-      >
-        Eco Noticias
-      </h1>
-      <section id="container-news" class="container-news mt-4 mb-8"></section>
-    </main>
+    <div class="pt-[85px]">
+      <main>
+        <h1
+          class="text-green-600 text-5xl m-4 shadow-lg rounded-lg text-center p-6 bg-white font-semibold"
+        >
+          Eco Noticias
+        </h1>
+        <section id="container-news" class="container-news mt-4 mb-8"></section>
+      </main>
+    </div>
     <footer class="py-6 bg-green-800 dark:text-gray-50">
       <div
         class="container px-6 mx-auto space-y-6 divide-y dark:divide-gray-400 md:space-y-12 divide-opacity-50"
@@ -302,6 +303,7 @@
         </div>
       </div>
     </footer>
+    <script src="../js/eco-noticias.js"></script>
     <script src="../js/nav-foot.js"></script>
   </body>
 </html>

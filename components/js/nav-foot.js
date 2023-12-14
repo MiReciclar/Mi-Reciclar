@@ -8,6 +8,7 @@ const hamburgerBars = document.querySelectorAll("#hamburger .bar");
 // Methods
 let banderaHamburguer = false;
 const handleModal = () => {
+<<<<<<< HEAD
   banderaHamburguer = !banderaHamburguer;
   // userMenu.classList.toggle("opacity-100");
   // userMenu.classList.toggle("scale-100");
@@ -22,6 +23,13 @@ const handleModal = () => {
     userMenu.style.opacity = "0";
   }
   
+=======
+  if (userMenu.classList.contains("hidden")) {
+    userMenu.classList.remove("hidden");
+  } else {
+    userMenu.classList.add("hidden");
+  }
+>>>>>>> 0788f00f6c19e7a1437d40aa976ae192159cce0d
 };
 smiley.addEventListener("click", handleModal);
 
@@ -34,7 +42,15 @@ hamburguer.addEventListener("click", handleHamburguer);
 
 // ! NAVBAR RENDER
 const navigationItems = [
+<<<<<<< HEAD
   { id: "inicio", label: "Inicio", nav: "../../index.html" },
+=======
+  {
+    id: "inicio",
+    label: "Inicio",
+    nav: "../../index.html",
+  },
+>>>>>>> 0788f00f6c19e7a1437d40aa976ae192159cce0d
   {
     id: "nuestraMision",
     label: "Nuestra Misión",
