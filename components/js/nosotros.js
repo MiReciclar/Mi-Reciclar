@@ -80,7 +80,7 @@ const integrantes = [
     img: "../img/integrantes/cami.jpeg",
     name: "Camila Ortubey",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, quasi non corrupti dolores aspernatur sunt et! Temporibus, aperiam dolore! Necessitatibus",
+      "Soy una Desarrolladora Web Full Stack apasionada por el aprendizaje constante y la creatividad. Disfruto de reunirme con amigos.",
     social: [
       {
         id: "git",
@@ -140,7 +140,7 @@ const integrantes = [
     img: "../img/integrantes/santi.jpeg",
     name: "Santiago Flores",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, quasi non corrupti dolores aspernatur sunt et! Temporibus, aperiam dolore! Necessitatibus",
+      "Soy un desarrollador Full Stack con experiencia en desarrollo web, destacándome en la creación de interfaces atractivas y funcionales con HTML, CSS y JavaScript.",
     social: [
       {
         id: "git",
