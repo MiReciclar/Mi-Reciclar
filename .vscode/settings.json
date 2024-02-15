@@ -68,5 +68,6 @@
         "variedad",
         "voluntariado",
         "zona"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }
